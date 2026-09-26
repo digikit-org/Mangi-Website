@@ -1,6 +1,6 @@
-import React from 'react';
-import { ArrowRight, Compass, Hammer, ShieldCheck } from 'lucide-react';
-import { siteConfig } from '../data/siteData';
+import React from "react";
+import { ArrowRight, Compass, Hammer, ShieldCheck } from "lucide-react";
+import { siteConfig } from "../data/siteData";
 
 export default function AboutSection({ onOpenConsultation }) {
   const { about } = siteConfig;
@@ -56,7 +56,7 @@ export default function AboutSection({ onOpenConsultation }) {
 
             <div className="pt-2">
               <button
-                onClick={() => onOpenConsultation('About Section')}
+                onClick={() => onOpenConsultation("About Section")}
                 className="gold-btn inline-flex items-center gap-2 px-5 py-2.5 rounded-lg font-semibold text-xs tracking-wide shadow-md group cursor-pointer"
               >
                 <span>{about.ctaText}</span>
@@ -71,20 +71,25 @@ export default function AboutSection({ onOpenConsultation }) {
               <h3 className="font-sans text-xs font-bold uppercase tracking-[0.2em] text-stone-400 mb-4">
                 Our Core Philosophy
               </h3>
-
+              {/*hello ji how are you*/}
               <div className="space-y-5">
                 {about.principles.map((item, idx) => {
                   const Icon = principleIcons[idx] || Compass;
                   const s = principleStyles[idx % principleStyles.length];
                   return (
-                    <div key={item.title} className="flex items-start gap-3.5 sm:gap-4 group">
+                    <div
+                      key={item.title}
+                      className="flex items-start gap-3.5 sm:gap-4 group"
+                    >
                       <div
                         className={`w-12 h-12 rounded-xl border flex items-center justify-center transition-all duration-300 group-hover:scale-105 shrink-0 mt-1 ${s.chip}`}
                       >
                         <Icon className="w-5 h-5 stroke-[1.8]" />
                       </div>
                       <div>
-                        <div className={`h-1 w-10 rounded-full mb-2 ${s.bar}`} />
+                        <div
+                          className={`h-1 w-10 rounded-full mb-2 ${s.bar}`}
+                        />
                         <h4
                           className={`font-serif text-lg sm:text-xl font-semibold text-[#141413] mb-1 transition-colors ${s.titleHover}`}
                         >
