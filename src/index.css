@@ -1,0 +1,141 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #faf8f5;
+  color: #1c1917;
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  overflow-x: hidden;
+}
+
+/* Custom Typography Accents */
+.font-display {
+  font-family: 'Playfair Display', Georgia, serif;
+}
+
+.font-serif-luxury {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+}
+
+/* Smooth Scrolling & Custom Scrollbar */
+html {
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1ede5;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c5a059;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #b38f47;
+}
+
+/* ===== Horizontal Scrollers ===== */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Grab / drag cursor for draggable carousels */
+.drag-scroll {
+  cursor: grab;
+}
+.drag-scroll.dragging {
+  cursor: grabbing;
+  scroll-snap-type: none;
+}
+.drag-scroll.dragging * {
+  pointer-events: none;
+  user-select: none;
+}
+
+/* Card entrance reveal when scrolled into view */
+.reveal-card {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.reveal-card.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Infinite logo marquee */
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.marquee-track {
+  animation: marquee 32s linear infinite;
+  will-change: transform;
+}
+.marquee-wrap:hover .marquee-track {
+  animation-play-state: paused;
+}
+
+/* Compositor fallback: environments where animations never advance */
+.no-anim .reveal-card {
+  opacity: 1 !important;
+  transform: none !important;
+  transition: none !important;
+}
+.no-anim .marquee-track {
+  animation: none !important;
+}
+@media (prefers-reduced-motion: reduce) {
+  .reveal-card {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+  .marquee-track {
+    animation: none !important;
+  }
+}
+
+/* Warm Gold Button Gradient & Hover Styles */
+.gold-btn {
+  background: linear-gradient(135deg, #d4a373 0%, #caa368 50%, #c5a059 100%);
+  color: #ffffff;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.gold-btn:hover {
+  background: linear-gradient(135deg, #caa368 0%, #b89047 50%, #a67c3d 100%);
+  color: #ffffff;
+  transform: translateY(-1px);
+  box-shadow: 0 10px 20px -5px rgba(197, 160, 89, 0.35);
+}
+
+.gold-btn-outline {
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(8px);
+  color: #ffffff;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.gold-btn-outline:hover {
+  border-color: #ffffff;
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateY(-1px);
+}
