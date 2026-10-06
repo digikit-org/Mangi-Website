@@ -10,9 +10,9 @@ export const siteConfig = {
     tagline: "Design. Build. Inspire.",
     subtitle: "Commercial Interior Design & Turnkey Execution",
     contact: {
-      phone: "+91 80881 96750",
-      whatsapp: "+91 80881 96750",
-      email: "bapanmistry@mangiinteriors.com",
+      phone: "+91 7742036962",
+      whatsapp: "+91 7742036962",
+      email: "info@mangiinteriors.com",
       address: "Bengaluru, Karnataka, India",
       socials: [
         { name: "LinkedIn", href: "https://linkedin.com" },
@@ -101,6 +101,13 @@ export const siteConfig = {
     servicesHeadline: "Complete Interior Solutions Under One Roof.",
     categories: [
       {
+        id: "healthcare",
+        title: "Healthcare Interiors",
+        description:
+          "Professional, welcoming and efficient environments designed around patients, staff and operational requirements.",
+        image: "/images/healthcare.jpg",
+      },
+      {
         id: "corporate",
         title: "Corporate & Office Interiors",
         description:
@@ -121,13 +128,7 @@ export const siteConfig = {
           "Thoughtfully designed spaces that balance atmosphere, functionality and guest experience.",
         image: "/images/hospitality.jpg",
       },
-      {
-        id: "healthcare",
-        title: "Healthcare Interiors",
-        description:
-          "Professional, welcoming and efficient environments designed around patients, staff and operational requirements.",
-        image: "/images/healthcare.jpg",
-      },
+
       {
         id: "commercial",
         title: "Commercial Interiors",
@@ -199,6 +200,13 @@ export const siteConfig = {
       "Every industry has its own challenges. Our approach adapts to the way your business operates.",
     items: [
       {
+        id: "healthcare",
+        title: "Healthcare",
+        description:
+          "Functional and reassuring spaces designed with people, efficiency and comfort in mind.",
+        image: "/images/healthcare.jpg",
+      },
+      {
         id: "workplaces",
         title: "Workplaces",
         description:
@@ -219,13 +227,7 @@ export const siteConfig = {
           "Distinctive interiors that create memorable environments for guests.",
         image: "/images/hospitality.jpg",
       },
-      {
-        id: "healthcare",
-        title: "Healthcare",
-        description:
-          "Functional and reassuring spaces designed with people, efficiency and comfort in mind.",
-        image: "/images/healthcare.jpg",
-      },
+
       {
         id: "commercial-spaces",
         title: "Commercial Spaces",
@@ -570,9 +572,9 @@ export const siteConfig = {
     title: "Let's Talk About Your Space.",
     subtext:
       "Planning a new office? Setting up a retail store? Expanding your business? Renovating an existing space?\nTell us what you're working on, and our team will get in touch to understand your requirements.",
-    directCall: "+91 80881 96750",
-    directWhatsapp: "+91 80881 96750",
-    directEmail: "bapanmistry@mangiinteriors.com",
+    directCall: "+91 7742036962",
+    directWhatsapp: "+91 7742036962",
+    directEmail: "info@mangiinteriors.com",
     formTitle: "Let's Discuss Your Project.",
     submitText: "Submit & Get a Free Consultation",
   },
@@ -610,9 +612,9 @@ export const siteConfig = {
       "Turnkey Solutions",
     ],
     contactInfo: {
-      phone: "+91 80881 96750",
-      email: "bapanmistry@mangiinteriors.com",
-      whatsapp: "+91 80881 96750",
+      phone: "+91 7742036962",
+      email: "info@mangiinteriors.com",
+      whatsapp: "+91 7742036962",
     },
     copyright: "© Mangi Interiors. All Rights Reserved.",
   },
