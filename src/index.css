@@ -10,7 +10,7 @@ body {
   margin: 0;
   padding: 0;
   background-color: #faf8f5;
-  color: #1c1917;
+  color: #2e2721;
   font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
   overflow-x: hidden;
 }
@@ -127,15 +127,16 @@ html {
 }
 
 .gold-btn-outline {
-  border: 1px solid rgba(255, 255, 255, 0.4);
-  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid #c5a059;
+  background: rgba(197, 160, 89, 0.08);
   backdrop-filter: blur(8px);
-  color: #ffffff;
+  color: #3a322a;
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .gold-btn-outline:hover {
-  border-color: #ffffff;
-  background: rgba(255, 255, 255, 0.15);
+  border-color: #b38f47;
+  background: #c5a059;
+  color: #ffffff;
   transform: translateY(-1px);
 }

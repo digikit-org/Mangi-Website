@@ -40,7 +40,7 @@ export default function AboutSection({ onOpenConsultation }) {
               <span className="text-[11px] sm:text-xs font-semibold uppercase tracking-[0.25em] text-[#8c6d3b] block mb-3">
                 {about.badge}
               </span>
-              <h2 className="font-serif text-2xl sm:text-3xl lg:text-4xl font-medium text-[#141413] tracking-tight leading-tight mb-2.5">
+              <h2 className="font-serif text-2xl sm:text-3xl lg:text-4xl font-medium text-[#2e2721] tracking-tight leading-tight mb-2.5">
                 {about.headline}
               </h2>
               <p className="font-serif text-base sm:text-lg text-[#8c6d3b] italic">
@@ -91,7 +91,7 @@ export default function AboutSection({ onOpenConsultation }) {
                           className={`h-1 w-10 rounded-full mb-2 ${s.bar}`}
                         />
                         <h4
-                          className={`font-serif text-lg sm:text-xl font-semibold text-[#141413] mb-1 transition-colors ${s.titleHover}`}
+                          className={`font-serif text-lg sm:text-xl font-semibold text-[#2e2721] mb-1 transition-colors ${s.titleHover}`}
                         >
                           {item.title}
                         </h4>

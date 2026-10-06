@@ -41,15 +41,15 @@ export const siteConfig = {
     description:
       "We design and deliver commercial spaces that bring together function, aesthetics, brand identity and business performance. From workplaces and retail environments to hospitality and healthcare spaces, Mangi Interiors manages every stage of the journey—from concept and design to execution and handover.",
     sectorChips: [
+      "Healthcare",
       "Offices",
       "Retail",
       "Hospitality",
-      "Healthcare",
       "Commercial Spaces",
     ],
     ctaButton: "Book a Free Consultation",
     secondaryButton: "Explore Our Work",
-    bgImage: "/images/Heroo.png",
+    bgImage: "/images/banner-desk.png",
   },
 
   // 08 — NUMBERS
@@ -75,15 +75,18 @@ export const siteConfig = {
     principles: [
       {
         title: "Design with Purpose.",
-        description: "Intelligent space planning and aesthetics tailored to your brand identity, daily workflow, and long-term business goals.",
+        description:
+          "Intelligent space planning and aesthetics tailored to your brand identity, daily workflow, and long-term business goals.",
       },
       {
         title: "Build with Precision.",
-        description: "Superior craftsmanship, stringent material quality checks, and millimetric execution across every fixture and finish.",
+        description:
+          "Superior craftsmanship, stringent material quality checks, and millimetric execution across every fixture and finish.",
       },
       {
         title: "Deliver with Responsibility.",
-        description: "Single-point turnkey accountability ensuring on-time, on-budget, snag-free handover ready for business operations.",
+        description:
+          "Single-point turnkey accountability ensuring on-time, on-budget, snag-free handover ready for business operations.",
       },
     ],
     ctaText: "Discover Mangi Interiors",
@@ -304,7 +307,8 @@ export const siteConfig = {
         location: "Indiranagar, Bengaluru",
         projectType: "Experiential Dining & Cocktail Lounge",
         area: "12,500 sq.ft",
-        scope: "Concept Design, Architectural Arches, Bespoke Furniture, Turnkey Fitout",
+        scope:
+          "Concept Design, Architectural Arches, Bespoke Furniture, Turnkey Fitout",
         brief:
           "Create a high-end dining destination that delivers intimate dining zones while maintaining fluid server circulation and theatrical ambient lighting.",
         approach:
@@ -329,7 +333,8 @@ export const siteConfig = {
         location: "Banjara Hills, Hyderabad",
         projectType: "Outpatient Surgical & Diagnostic Center",
         area: "26,000 sq.ft",
-        scope: "Medical Interior Architecture, Cleanroom HVAC, Turnkey Execution",
+        scope:
+          "Medical Interior Architecture, Cleanroom HVAC, Turnkey Execution",
         brief:
           "Transform a raw commercial floorplate into an empathetic, calming healthcare facility that eliminates clinical anxiety while maintaining sterile clinical protocols.",
         approach:
@@ -354,7 +359,8 @@ export const siteConfig = {
         location: "UB City, Bengaluru",
         projectType: "Luxury Couture Retail Showroom",
         area: "8,500 sq.ft",
-        scope: "Luxury Retail Design, Custom Display Joinery, High-CRI Lighting",
+        scope:
+          "Luxury Retail Design, Custom Display Joinery, High-CRI Lighting",
         brief:
           "A premier fashion label sought an understated yet ultra-luxurious showroom that lets merchandise shine as museum pieces.",
         approach:
@@ -388,7 +394,7 @@ export const siteConfig = {
           "Delivered vibrant communal pantries, soundproofed phone pods, meeting rooms with 4K video conferencing, and ergonomic sit-stand desks.",
         highlights: [
           "Space Planning: 60/40 balance between focus workstations and collaborative lounges",
-          "Interior Design: Industrial modern loft vibe with exposed black ducting and warm brick",
+          "Interior Design: Industrial modern loft vibe with exposed architectural ducting and warm brick",
           "Execution: Fast-tracked 45-day turnkey delivery",
           "Furniture & Finishes: Commercial Grade 5 acoustic carpeting and magnetic writable glass boards",
           "Project Management: Zero downtime deployment ready for immediate day-one occupancy",
@@ -500,7 +506,8 @@ export const siteConfig = {
         description:
           "We transform the plan into a detailed interior concept that reflects your brand and functional requirements.",
         icon: "PenTool",
-        summary: "Photorealistic 3D VR renders, material palettes & MEP schematics",
+        summary:
+          "Photorealistic 3D VR renders, material palettes & MEP schematics",
       },
       {
         step: "04",
@@ -508,7 +515,8 @@ export const siteConfig = {
         description:
           "Our project team coordinates materials, vendors, contractors and site activities to bring the design to life.",
         icon: "Hammer",
-        summary: "Precision civil works, custom joinery fabrication & daily site QC",
+        summary:
+          "Precision civil works, custom joinery fabrication & daily site QC",
       },
       {
         step: "05",
@@ -525,15 +533,34 @@ export const siteConfig = {
   clients: {
     badge: "OUR CLIENTS",
     title: "Trusted by Leading Brands",
-    description: "Long-term partnerships built on trust, transparency and exceptional delivery.",
+    description:
+      "Long-term partnerships built on trust, transparency and exceptional delivery.",
     brands: [
-      { name: "TATA", font: "font-sans font-black tracking-[0.25em] text-2xl sm:text-3xl text-stone-800" },
-      { name: "IBM", font: "font-mono font-black tracking-[0.2em] text-2xl sm:text-3xl text-stone-800" },
-      { name: "Infosys", font: "font-sans font-semibold tracking-normal text-2xl sm:text-3xl text-[#007cc3]" },
+      {
+        name: "TATA",
+        font: "font-sans font-extrabold tracking-[0.25em] text-2xl sm:text-3xl text-[#3a322a]",
+      },
+      {
+        name: "IBM",
+        font: "font-mono font-extrabold tracking-[0.2em] text-2xl sm:text-3xl text-[#3a322a]",
+      },
+      {
+        name: "Infosys",
+        font: "font-sans font-semibold tracking-normal text-2xl sm:text-3xl text-[#007cc3]",
+      },
       { name: "HCG", subtitle: "The Specialist in Cancer Care" },
-      { name: "wework", font: "font-serif italic font-normal tracking-tight text-2xl sm:text-3xl text-stone-900" },
-      { name: "Hilton", font: "font-serif font-medium tracking-widest uppercase text-xl sm:text-2xl text-stone-800" },
-      { name: "DLF", font: "font-sans font-black tracking-widest uppercase text-2xl sm:text-3xl text-stone-900" },
+      {
+        name: "wework",
+        font: "font-serif italic font-normal tracking-tight text-2xl sm:text-3xl text-[#3a322a]",
+      },
+      {
+        name: "Hilton",
+        font: "font-serif font-medium tracking-widest uppercase text-xl sm:text-2xl text-[#3a322a]",
+      },
+      {
+        name: "DLF",
+        font: "font-sans font-extrabold tracking-widest uppercase text-2xl sm:text-3xl text-[#3a322a]",
+      },
     ],
   },
 

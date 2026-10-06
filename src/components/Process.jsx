@@ -78,7 +78,7 @@ export default function Process() {
             <span className="text-[11px] sm:text-xs font-semibold uppercase tracking-[0.25em] text-[#8c6d3b] block mb-3">
               {process.badge}
             </span>
-            <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-medium text-[#141413] tracking-tight">
+            <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-medium text-[#2e2721] tracking-tight">
               {process.title}
             </h2>
           </div>
@@ -129,7 +129,7 @@ export default function Process() {
                     <span className={`font-mono text-[11px] font-bold tracking-wider block mb-1 ${s.num}`}>
                       STEP {step.step}
                     </span>
-                    <h3 className="font-serif text-lg sm:text-xl font-semibold text-[#141413]">
+                    <h3 className="font-serif text-lg sm:text-xl font-semibold text-[#2e2721]">
                       {step.title}
                     </h3>
                   </div>

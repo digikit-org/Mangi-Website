@@ -2,15 +2,16 @@ import React, { useRef, useState, useEffect, useCallback } from 'react';
 import { MoveHorizontal, MoveRight } from 'lucide-react';
 
 /**
- * DragScroller — edge-bleed strip the visitor drags with the mouse
- * (native scroll + inertia). Unique to the Industries section.
- * Full-bleed: track starts at the container's left edge and runs to
- * the viewport's right edge, hinting there is more beyond the fold.
+ * DragScroller — edge-bleed strip with:
+ *  - Automatic photograph movement (gentle auto-scroll)
+ *  - Dragging with mouse / touch
+ *  - Pause on hover / touch
  */
 export default function DragScroller({ children, hint = 'Drag to explore' }) {
   const trackRef = useRef(null);
   const [dragging, setDragging] = useState(false);
   const [isDragging, setIsDragging] = useState(false);
+  const [isHovered, setIsHovered] = useState(false);
   const startX = useRef(0);
   const startScroll = useRef(0);
 
@@ -45,11 +46,38 @@ export default function DragScroller({ children, hint = 'Drag to explore' }) {
     };
   }, [isDragging, onMouseMove, endDrag]);
 
+  // Gentle auto-movement when not interacting
+  useEffect(() => {
+    if (isDragging || isHovered) return;
+
+    const timer = setInterval(() => {
+      const el = trackRef.current;
+      if (!el) return;
+      const max = el.scrollWidth - el.clientWidth;
+      if (el.scrollLeft >= max - 10) {
+        el.scrollTo({ left: 0, behavior: 'smooth' });
+      } else {
+        const card = el.querySelector(':scope > *');
+        const step = card ? card.getBoundingClientRect().width + 24 : 300;
+        el.scrollBy({ left: step, behavior: 'smooth' });
+      }
+    }, 3800);
+
+    return () => clearInterval(timer);
+  }, [isDragging, isHovered]);
+
   return (
-    <div className="relative">
+    <div
+      className="relative"
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+      onTouchStart={() => setIsHovered(true)}
+      onTouchEnd={() => setIsHovered(false)}
+    >
       <div
         ref={trackRef}
-        className={`drag-scroll flex gap-5 sm:gap-6 overflow-x-auto no-scrollbar pb-2 select-none ${
+        onMouseDown={onMouseDown}
+        className={`drag-scroll flex gap-5 sm:gap-6 overflow-x-auto no-scrollbar scroll-smooth pb-2 select-none ${
           dragging ? 'dragging' : ''
         }`}
       >
@@ -57,8 +85,8 @@ export default function DragScroller({ children, hint = 'Drag to explore' }) {
       </div>
 
       {/* Drag hint pill */}
-      <div className="mt-6 flex items-center gap-3 text-stone-500">
-        <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-[#eae3d5] bg-white text-[11px] font-semibold uppercase tracking-wider">
+      <div className="mt-6 flex items-center gap-3 text-[#78716c]">
+        <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-[#eae3d5] bg-white text-[11px] font-semibold uppercase tracking-wider text-[#4a4036] shadow-xs">
           <MoveHorizontal className="w-3.5 h-3.5 text-[#c5a059]" />
           {hint}
         </span>
