@@ -10,9 +10,9 @@ export const siteConfig = {
     tagline: "Design. Build. Inspire.",
     subtitle: "Commercial Interior Design & Turnkey Execution",
     contact: {
-      phone: "+91 80881 96750",
-      whatsapp: "+91 80881 96750",
-      email: "bapanmistry@mangiinteriors.com",
+      phone: "+91 7742036962",
+      whatsapp: "+91 7742036962",
+      email: "info@mangiinteriors.com",
       address: "Bengaluru, Karnataka, India",
       socials: [
         { name: "LinkedIn", href: "https://linkedin.com" },
@@ -101,6 +101,13 @@ export const siteConfig = {
     servicesHeadline: "Complete Interior Solutions Under One Roof.",
     categories: [
       {
+        id: "healthcare",
+        title: "Healthcare Interiors",
+        description:
+          "Professional, welcoming and efficient environments designed around patients, staff and operational requirements.",
+        image: "/images/healthcare.jpg",
+      },
+      {
         id: "corporate",
         title: "Corporate & Office Interiors",
         description:
@@ -121,13 +128,7 @@ export const siteConfig = {
           "Thoughtfully designed spaces that balance atmosphere, functionality and guest experience.",
         image: "/images/hospitality.jpg",
       },
-      {
-        id: "healthcare",
-        title: "Healthcare Interiors",
-        description:
-          "Professional, welcoming and efficient environments designed around patients, staff and operational requirements.",
-        image: "/images/healthcare.jpg",
-      },
+
       {
         id: "commercial",
         title: "Commercial Interiors",
@@ -199,6 +200,13 @@ export const siteConfig = {
       "Every industry has its own challenges. Our approach adapts to the way your business operates.",
     items: [
       {
+        id: "healthcare",
+        title: "Healthcare",
+        description:
+          "Functional and reassuring spaces designed with people, efficiency and comfort in mind.",
+        image: "/images/healthcare.jpg",
+      },
+      {
         id: "workplaces",
         title: "Workplaces",
         description:
@@ -219,13 +227,7 @@ export const siteConfig = {
           "Distinctive interiors that create memorable environments for guests.",
         image: "/images/hospitality.jpg",
       },
-      {
-        id: "healthcare",
-        title: "Healthcare",
-        description:
-          "Functional and reassuring spaces designed with people, efficiency and comfort in mind.",
-        image: "/images/healthcare.jpg",
-      },
+
       {
         id: "commercial-spaces",
         title: "Commercial Spaces",
@@ -537,29 +539,37 @@ export const siteConfig = {
       "Long-term partnerships built on trust, transparency and exceptional delivery.",
     brands: [
       {
-        name: "TATA",
-        font: "font-sans font-extrabold tracking-[0.25em] text-2xl sm:text-3xl text-[#3a322a]",
+        name: "Apollo Hospitals",
+        logo: "/images/logos/logo1.jpeg",
       },
       {
-        name: "IBM",
-        font: "font-mono font-extrabold tracking-[0.2em] text-2xl sm:text-3xl text-[#3a322a]",
+        name: "Sahyadri Hospitals",
+        logo: "/images/logos/logo2.jpeg",
       },
       {
-        name: "Infosys",
-        font: "font-sans font-semibold tracking-normal text-2xl sm:text-3xl text-[#007cc3]",
-      },
-      { name: "HCG", subtitle: "The Specialist in Cancer Care" },
-      {
-        name: "wework",
-        font: "font-serif italic font-normal tracking-tight text-2xl sm:text-3xl text-[#3a322a]",
+        name: "Manipal Hospitals",
+        logo: "/images/logos/logo3.jpeg",
       },
       {
-        name: "Hilton",
-        font: "font-serif font-medium tracking-widest uppercase text-xl sm:text-2xl text-[#3a322a]",
+        name: "KIMS Hospitals",
+        logo: "/images/logos/logo4.jpeg",
       },
       {
-        name: "DLF",
-        font: "font-sans font-extrabold tracking-widest uppercase text-2xl sm:text-3xl text-[#3a322a]",
+        name: "Manipal Academy of Higher Education",
+        logo: "/images/logos/logo5.jpeg",
+      },
+      {
+        name: "AMRI Hospitals",
+        logo: "/images/logos/logo6.jpeg",
+      },
+      {
+        name: "ZYETA",
+        logo: "/images/logos/logo7.jpeg",
+        invert: true,
+      },
+      {
+        name: "JLL",
+        logo: "/images/logos/logo8.jpeg",
       },
     ],
   },
@@ -570,9 +580,9 @@ export const siteConfig = {
     title: "Let's Talk About Your Space.",
     subtext:
       "Planning a new office? Setting up a retail store? Expanding your business? Renovating an existing space?\nTell us what you're working on, and our team will get in touch to understand your requirements.",
-    directCall: "+91 80881 96750",
-    directWhatsapp: "+91 80881 96750",
-    directEmail: "bapanmistry@mangiinteriors.com",
+    directCall: "+91 7742036962",
+    directWhatsapp: "+91 7742036962",
+    directEmail: "info@mangiinteriors.com",
     formTitle: "Let's Discuss Your Project.",
     submitText: "Submit & Get a Free Consultation",
   },
@@ -610,9 +620,9 @@ export const siteConfig = {
       "Turnkey Solutions",
     ],
     contactInfo: {
-      phone: "+91 80881 96750",
-      email: "bapanmistry@mangiinteriors.com",
-      whatsapp: "+91 80881 96750",
+      phone: "+91 7742036962",
+      email: "info@mangiinteriors.com",
+      whatsapp: "+91 7742036962",
     },
     copyright: "© Mangi Interiors. All Rights Reserved.",
   },
