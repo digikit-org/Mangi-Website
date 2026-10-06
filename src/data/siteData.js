@@ -539,29 +539,37 @@ export const siteConfig = {
       "Long-term partnerships built on trust, transparency and exceptional delivery.",
     brands: [
       {
-        name: "TATA",
-        font: "font-sans font-extrabold tracking-[0.25em] text-2xl sm:text-3xl text-[#3a322a]",
+        name: "Apollo Hospitals",
+        logo: "/images/logos/logo1.jpeg",
       },
       {
-        name: "IBM",
-        font: "font-mono font-extrabold tracking-[0.2em] text-2xl sm:text-3xl text-[#3a322a]",
+        name: "Sahyadri Hospitals",
+        logo: "/images/logos/logo2.jpeg",
       },
       {
-        name: "Infosys",
-        font: "font-sans font-semibold tracking-normal text-2xl sm:text-3xl text-[#007cc3]",
-      },
-      { name: "HCG", subtitle: "The Specialist in Cancer Care" },
-      {
-        name: "wework",
-        font: "font-serif italic font-normal tracking-tight text-2xl sm:text-3xl text-[#3a322a]",
+        name: "Manipal Hospitals",
+        logo: "/images/logos/logo3.jpeg",
       },
       {
-        name: "Hilton",
-        font: "font-serif font-medium tracking-widest uppercase text-xl sm:text-2xl text-[#3a322a]",
+        name: "KIMS Hospitals",
+        logo: "/images/logos/logo4.jpeg",
       },
       {
-        name: "DLF",
-        font: "font-sans font-extrabold tracking-widest uppercase text-2xl sm:text-3xl text-[#3a322a]",
+        name: "Manipal Academy of Higher Education",
+        logo: "/images/logos/logo5.jpeg",
+      },
+      {
+        name: "AMRI Hospitals",
+        logo: "/images/logos/logo6.jpeg",
+      },
+      {
+        name: "ZYETA",
+        logo: "/images/logos/logo7.jpeg",
+        invert: true,
+      },
+      {
+        name: "JLL",
+        logo: "/images/logos/logo8.jpeg",
       },
     ],
   },
