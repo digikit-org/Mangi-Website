@@ -19,7 +19,7 @@ export default function Clients() {
             <span className="text-[11px] sm:text-xs font-semibold uppercase tracking-[0.25em] text-[#8c6d3b] block mb-3">
               {badge}
             </span>
-            <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-medium text-[#141413] tracking-tight">
+            <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-medium text-[#2e2721] tracking-tight">
               {title}
             </h2>
           </div>
@@ -30,7 +30,6 @@ export default function Clients() {
             </p>
           </div>
         </div>
-
       </div>
 
       {/* Infinite brand marquee — auto-scrolls, pauses on hover */}
@@ -45,40 +44,40 @@ export default function Clients() {
               {brands.map((brand) => (
                 <div
                   key={brand.name}
-                  className="flex w-[200px] sm:w-[220px] h-[96px] shrink-0 flex-col items-center justify-center rounded-2xl border border-stone-200 bg-white px-4 text-center select-none grayscale opacity-75 transition-all duration-300 hover:grayscale-0 hover:opacity-100 hover:border-[#c5a059]/60 hover:shadow-lg hover:-translate-y-1 cursor-default"
+                  className="flex w-[200px] sm:w-[220px] h-[96px] shrink-0 flex-col items-center justify-center rounded-2xl border border-[#e8ded0] bg-[#faf8f5] px-4 text-center select-none grayscale opacity-80 transition-all duration-300 hover:grayscale-0 hover:opacity-100 hover:border-[#c5a059]/60 hover:shadow-lg hover:-translate-y-1 cursor-default"
                 >
-              {brand.name === 'HCG' ? (
-                <div className="flex flex-col items-center">
-                  <span className="font-serif font-black tracking-tight text-2xl text-[#141413]">HCG</span>
-                  <span className="text-[8px] uppercase tracking-tighter text-stone-500 font-semibold">The Specialist in Cancer Care</span>
-                </div>
-              ) : brand.name === 'IBM' ? (
-                <div className="font-mono font-black tracking-[0.2em] text-2xl sm:text-3xl text-stone-800">
-                  IBM
-                </div>
-              ) : brand.name === 'TATA' ? (
-                <div className="font-sans font-black tracking-[0.25em] text-2xl sm:text-3xl text-stone-800">
-                  TATA
-                </div>
-              ) : brand.name === 'Infosys' ? (
-                <div className="font-sans font-semibold tracking-normal text-2xl sm:text-3xl text-[#007cc3]">
-                  Infosys
-                </div>
-              ) : brand.name === 'wework' ? (
-                <div className="font-serif italic font-normal tracking-tight text-2xl sm:text-3xl text-stone-900">
-                  wework
-                </div>
-              ) : brand.name === 'Hilton' ? (
-                <div className="font-serif font-medium tracking-widest uppercase text-xl sm:text-2xl text-stone-800">
-                  Hilton
-                </div>
-              ) : brand.name === 'DLF' ? (
-                <div className="font-sans font-black tracking-widest uppercase text-2xl sm:text-3xl text-stone-900">
-                  DLF
-                </div>
-              ) : (
-                <span className={brand.font}>{brand.name}</span>
-              )}
+                  {brand.name === 'HCG' ? (
+                    <div className="flex flex-col items-center">
+                      <span className="font-serif font-extrabold tracking-tight text-2xl text-[#2e2721]">HCG</span>
+                      <span className="text-[8px] uppercase tracking-tighter text-[#78716c] font-semibold">The Specialist in Cancer Care</span>
+                    </div>
+                  ) : brand.name === 'IBM' ? (
+                    <div className="font-mono font-extrabold tracking-[0.2em] text-2xl sm:text-3xl text-[#3a322a]">
+                      IBM
+                    </div>
+                  ) : brand.name === 'TATA' ? (
+                    <div className="font-sans font-extrabold tracking-[0.25em] text-2xl sm:text-3xl text-[#3a322a]">
+                      TATA
+                    </div>
+                  ) : brand.name === 'Infosys' ? (
+                    <div className="font-sans font-semibold tracking-normal text-2xl sm:text-3xl text-[#007cc3]">
+                      Infosys
+                    </div>
+                  ) : brand.name === 'wework' ? (
+                    <div className="font-serif italic font-normal tracking-tight text-2xl sm:text-3xl text-[#3a322a]">
+                      wework
+                    </div>
+                  ) : brand.name === 'Hilton' ? (
+                    <div className="font-serif font-medium tracking-widest uppercase text-xl sm:text-2xl text-[#3a322a]">
+                      Hilton
+                    </div>
+                  ) : brand.name === 'DLF' ? (
+                    <div className="font-sans font-extrabold tracking-widest uppercase text-2xl sm:text-3xl text-[#3a322a]">
+                      DLF
+                    </div>
+                  ) : (
+                    <span className={brand.font}>{brand.name}</span>
+                  )}
                 </div>
               ))}
             </div>

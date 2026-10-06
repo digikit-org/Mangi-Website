@@ -27,7 +27,7 @@ export default function Services({ onSelectService, onOpenConsultation }) {
             <span className="text-[11px] sm:text-xs font-semibold uppercase tracking-[0.25em] text-[#8c6d3b] block mb-3">
               {whatWeDo.badge}
             </span>
-            <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-medium text-[#141413] tracking-tight">
+            <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-medium text-[#2e2721] tracking-tight">
               {whatWeDo.title}
             </h2>
           </div>
@@ -40,20 +40,18 @@ export default function Services({ onSelectService, onOpenConsultation }) {
             <div className="inline-flex rounded-lg bg-stone-200/70 p-1 text-xs font-semibold">
               <button
                 onClick={() => setActiveTab('sectors')}
-                className={`px-3 py-1.5 rounded-md transition-all ${
+                className={`px-3 py-1.5 rounded-md transition-all cursor-pointer ${
                   activeTab === 'sectors'
-                    ? 'bg-white text-stone-900 shadow-sm'
-                    : 'text-stone-600 hover:text-stone-900'
+                    ? 'bg-white text-[#2e2721] shadow-sm'
+                    : 'text-[#6e6459] hover:text-[#2e2721]'
                 }`}
               >
                 End-to-End Solutions
               </button>
-              {/* "Our Expertise (6 Pillars)" disabled per request —
-                  to re-enable: restore onClick={() => setActiveTab('capabilities')} and the active styles */}
               <button
                 disabled
                 aria-disabled="true"
-                className="px-3 py-1.5 rounded-md text-stone-400 cursor-not-allowed"
+                className="px-3 py-1.5 rounded-md text-[#9e9284] cursor-not-allowed"
               >
                 Our Expertise (6 Pillars)
               </button>
@@ -71,31 +69,31 @@ export default function Services({ onSelectService, onOpenConsultation }) {
                     onClick={() => onSelectService(cat)}
                     className="reveal-card group cursor-pointer snap-start shrink-0 w-[82vw] sm:w-[46%] lg:w-[31.5%] bg-white rounded-2xl overflow-hidden border border-[#eae3d5] hover:border-[#c5a059]/50 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between"
                   >
-                    <div className="aspect-[16/10] overflow-hidden bg-stone-100 relative">
+                    <div className="aspect-[16/10] overflow-hidden bg-[#f4efe6] relative">
                       <img
                         src={cat.image}
                         alt={cat.title}
                         className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+                      <div className="absolute inset-0 bg-gradient-to-t from-[#2e2721]/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
                     </div>
 
                     <div className="p-6 flex-1 flex flex-col justify-between">
                       <div>
                         <div className="flex items-center justify-between gap-2 mb-2.5">
-                          <h3 className="font-serif text-xl sm:text-2xl font-semibold text-[#141413] group-hover:text-[#8c6d3b] transition-colors">
+                          <h3 className="font-serif text-xl sm:text-2xl font-semibold text-[#2e2721] group-hover:text-[#8c6d3b] transition-colors">
                             {cat.title}
                           </h3>
-                          <div className="w-8 h-8 rounded-full border border-stone-200 flex items-center justify-center text-stone-400 group-hover:text-white group-hover:bg-[#141413] group-hover:border-[#141413] transition-all shrink-0">
+                          <div className="w-8 h-8 rounded-full border border-[#eae3d5] bg-[#faf8f5] flex items-center justify-center text-[#78716c] group-hover:text-white group-hover:bg-[#c5a059] group-hover:border-[#c5a059] transition-all shrink-0">
                             <ArrowUpRight className="w-4 h-4" />
                           </div>
                         </div>
-                        <p className="text-xs sm:text-sm text-stone-600 leading-relaxed">
+                        <p className="text-xs sm:text-sm text-[#6e6459] leading-relaxed">
                           {cat.description}
                         </p>
                       </div>
 
-                      <div className="mt-5 pt-4 border-t border-stone-100 flex items-center justify-between text-xs font-semibold text-[#8c6d3b]">
+                      <div className="mt-5 pt-4 border-t border-[#f1ede5] flex items-center justify-between text-xs font-semibold text-[#8c6d3b]">
                         <span>Explore Space Requirements</span>
                         <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />
                       </div>
@@ -115,21 +113,21 @@ export default function Services({ onSelectService, onOpenConsultation }) {
                           <div className="w-12 h-12 rounded-xl bg-[#faf6ee] border border-[#e8ded0] flex items-center justify-center text-[#8c6d3b] group-hover:bg-[#8c6d3b] group-hover:text-white transition-all duration-300">
                             <IconComp className="w-5 h-5 stroke-[1.8]" />
                           </div>
-                          <div className="w-8 h-8 rounded-full border border-stone-200 flex items-center justify-center text-stone-400 group-hover:text-white group-hover:bg-[#141413] group-hover:border-[#141413] transition-all">
+                          <div className="w-8 h-8 rounded-full border border-[#eae3d5] bg-[#faf8f5] flex items-center justify-center text-[#78716c] group-hover:text-white group-hover:bg-[#c5a059] group-hover:border-[#c5a059] transition-all">
                             <ArrowUpRight className="w-4 h-4" />
                           </div>
                         </div>
 
-                        <h3 className="font-serif text-xl sm:text-2xl font-semibold text-[#141413] mb-3 group-hover:text-[#8c6d3b] transition-colors">
+                        <h3 className="font-serif text-xl sm:text-2xl font-semibold text-[#2e2721] mb-3 group-hover:text-[#8c6d3b] transition-colors">
                           {cap.title}
                         </h3>
 
-                        <p className="text-xs sm:text-sm text-stone-600 leading-relaxed">
+                        <p className="text-xs sm:text-sm text-[#6e6459] leading-relaxed">
                           {cap.description}
                         </p>
                       </div>
 
-                      <div className="mt-6 pt-4 border-t border-stone-100 flex items-center text-xs font-semibold text-[#8c6d3b]">
+                      <div className="mt-6 pt-4 border-t border-[#f1ede5] flex items-center text-xs font-semibold text-[#8c6d3b]">
                         <span>Consult our specialists</span>
                         <ArrowRight className="w-3.5 h-3.5 ml-1.5 transition-transform group-hover:translate-x-1" />
                       </div>
@@ -142,10 +140,10 @@ export default function Services({ onSelectService, onOpenConsultation }) {
         {/* Bottom CTA Strip */}
         <div className="mt-8 p-6 sm:p-8 rounded-2xl bg-white border border-[#e8ded0] flex flex-col sm:flex-row sm:items-center justify-between gap-6 shadow-sm">
           <div>
-            <h4 className="font-serif text-xl font-semibold text-[#141413]">
+            <h4 className="font-serif text-xl font-semibold text-[#2e2721]">
               Need a custom commercial turnkey solution?
             </h4>
-            <p className="text-xs sm:text-sm text-stone-600 mt-1">
+            <p className="text-xs sm:text-sm text-[#6e6459] mt-1">
               From concept drawings to final handover keys, we take complete responsibility.
             </p>
           </div>

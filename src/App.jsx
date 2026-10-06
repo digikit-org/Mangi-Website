@@ -38,7 +38,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col bg-[#faf8f5] text-[#1c1917] selection:bg-[#c5a059]/25 selection:text-[#1c1917]">
+    <div className="min-h-screen flex flex-col bg-[#faf8f5] text-[#2e2721] selection:bg-[#c5a059]/25 selection:text-[#2e2721]">
       {/* 1. Header Navigation */}
       <Navbar onOpenConsultation={handleOpenInquiry} />
 

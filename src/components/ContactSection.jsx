@@ -47,21 +47,21 @@ export default function ContactSection() {
     <section id="contact" className="w-full py-10 sm:py-14 bg-[#fdfbf7] border-t border-[#eae3d5]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
-          {/* Left Column: Direct Contact & Intro from Google Doc */}
+          {/* Left Column: Direct Contact & Intro */}
           <div className="lg:col-span-5 space-y-6">
             <div>
               <span className="text-[11px] sm:text-xs font-semibold uppercase tracking-[0.25em] text-[#8c6d3b] block mb-3">
                 {contactSection.badge}
               </span>
-              <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-medium text-[#141413] tracking-tight mb-4">
+              <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-medium text-[#2e2721] tracking-tight mb-4">
                 {contactSection.title}
               </h2>
-              <p className="text-sm sm:text-base text-stone-600 leading-relaxed whitespace-pre-line">
+              <p className="text-sm sm:text-base text-[#6d665e] leading-relaxed whitespace-pre-line">
                 {contactSection.subtext}
               </p>
             </div>
 
-            {/* Direct Contact Cards from Google Doc */}
+            {/* Direct Contact Cards */}
             <div className="bg-white rounded-2xl p-6 border border-[#e8ded0] space-y-4 shadow-sm">
               <h3 className="font-sans text-xs font-bold uppercase tracking-[0.2em] text-[#8c6d3b]">
                 Prefer to Talk Directly?
@@ -70,13 +70,13 @@ export default function ContactSection() {
               <div className="space-y-3">
                 <a
                   href={`tel:${contactSection.directCall.replace(/\s+/g, '')}`}
-                  className="flex items-center gap-3.5 p-3 rounded-xl bg-stone-50 hover:bg-[#faf6ee] text-stone-800 transition-colors"
+                  className="flex items-center gap-3.5 p-3 rounded-xl bg-[#faf8f5] hover:bg-[#f4efe6] text-[#3a322a] transition-colors"
                 >
-                  <div className="w-9 h-9 rounded-lg bg-white border border-stone-200 flex items-center justify-center text-[#8c6d3b]">
+                  <div className="w-9 h-9 rounded-lg bg-white border border-[#e8ded0] flex items-center justify-center text-[#8c6d3b]">
                     <Phone className="w-4 h-4" />
                   </div>
                   <div>
-                    <span className="text-[10px] text-stone-500 uppercase font-bold block">Direct Call</span>
+                    <span className="text-[10px] text-[#8c8275] uppercase font-bold block">Direct Call</span>
                     <strong className="text-sm">{contactSection.directCall}</strong>
                   </div>
                 </a>
@@ -85,7 +85,7 @@ export default function ContactSection() {
                   href={`https://wa.me/${contactSection.directWhatsapp.replace(/[^0-9]/g, '')}`}
                   target="_blank"
                   rel="noreferrer"
-                  className="flex items-center gap-3.5 p-3 rounded-xl bg-emerald-50/60 hover:bg-emerald-50 text-stone-800 transition-colors"
+                  className="flex items-center gap-3.5 p-3 rounded-xl bg-emerald-50/60 hover:bg-emerald-50 text-[#3a322a] transition-colors"
                 >
                   <div className="w-9 h-9 rounded-lg bg-white border border-emerald-200 flex items-center justify-center text-emerald-600">
                     <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true">
@@ -100,13 +100,13 @@ export default function ContactSection() {
 
                 <a
                   href={`mailto:${contactSection.directEmail}`}
-                  className="flex items-center gap-3.5 p-3 rounded-xl bg-stone-50 hover:bg-[#faf6ee] text-stone-800 transition-colors"
+                  className="flex items-center gap-3.5 p-3 rounded-xl bg-[#faf8f5] hover:bg-[#f4efe6] text-[#3a322a] transition-colors"
                 >
-                  <div className="w-9 h-9 rounded-lg bg-white border border-stone-200 flex items-center justify-center text-[#8c6d3b]">
+                  <div className="w-9 h-9 rounded-lg bg-white border border-[#e8ded0] flex items-center justify-center text-[#8c6d3b]">
                     <Mail className="w-4 h-4" />
                   </div>
                   <div>
-                    <span className="text-[10px] text-stone-500 uppercase font-bold block">Corporate Inquiries</span>
+                    <span className="text-[10px] text-[#8c8275] uppercase font-bold block">Corporate Inquiries</span>
                     <strong className="text-xs sm:text-sm break-all">{contactSection.directEmail}</strong>
                   </div>
                 </a>
@@ -114,23 +114,23 @@ export default function ContactSection() {
             </div>
           </div>
 
-          {/* Right Column: Google Doc Full Contact Form */}
+          {/* Right Column: Contact Form */}
           <div className="lg:col-span-7">
             <div className="bg-white rounded-2xl p-6 sm:p-10 border border-[#e8ded0] shadow-md">
-              <h3 className="font-serif text-2xl sm:text-3xl font-semibold text-[#141413] mb-2">
+              <h3 className="font-serif text-2xl sm:text-3xl font-semibold text-[#2e2721] mb-2">
                 {contactSection.formTitle}
               </h3>
-              <p className="text-xs sm:text-sm text-stone-500 mb-6">
+              <p className="text-xs sm:text-sm text-[#6e6459] mb-6">
                 Fill out the form below. Our commercial project team will review and get in touch within 24 hours.
               </p>
 
               {submitted ? (
                 <div className="py-12 text-center flex flex-col items-center justify-center">
                   <CheckCircle2 className="w-16 h-16 text-emerald-600 mb-3 animate-bounce" />
-                  <h4 className="font-serif text-2xl font-semibold text-[#141413] mb-1">
+                  <h4 className="font-serif text-2xl font-semibold text-[#2e2721] mb-1">
                     Inquiry Successfully Received
                   </h4>
-                  <p className="text-sm text-stone-600 max-w-md">
+                  <p className="text-sm text-[#5c5349] max-w-md">
                     Thank you! Our lead architectural project manager will contact you shortly to schedule your free consultation.
                   </p>
                 </div>
@@ -138,7 +138,7 @@ export default function ContactSection() {
                 <form onSubmit={handleSubmit} className="space-y-4">
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
-                      <label className="block text-xs font-semibold text-stone-700 uppercase tracking-wider mb-1">
+                      <label className="block text-xs font-semibold text-[#4a4036] uppercase tracking-wider mb-1">
                         Name *
                       </label>
                       <input
@@ -147,12 +147,12 @@ export default function ContactSection() {
                         placeholder="Your full name"
                         value={formData.name}
                         onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                        className="w-full bg-stone-50 border border-stone-200 rounded-lg px-3.5 py-2.5 text-sm text-stone-900 focus:outline-none focus:border-[#8c6d3b] focus:bg-white"
+                        className="w-full bg-[#faf8f5] border border-[#e5dcd0] rounded-lg px-3.5 py-2.5 text-sm text-[#2e2721] focus:outline-none focus:border-[#8c6d3b] focus:bg-white"
                       />
                     </div>
 
                     <div>
-                      <label className="block text-xs font-semibold text-stone-700 uppercase tracking-wider mb-1">
+                      <label className="block text-xs font-semibold text-[#4a4036] uppercase tracking-wider mb-1">
                         Phone / WhatsApp *
                       </label>
                       <input
@@ -161,14 +161,14 @@ export default function ContactSection() {
                         placeholder="+91 80881 96750"
                         value={formData.phone}
                         onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                        className="w-full bg-stone-50 border border-stone-200 rounded-lg px-3.5 py-2.5 text-sm text-stone-900 focus:outline-none focus:border-[#8c6d3b] focus:bg-white"
+                        className="w-full bg-[#faf8f5] border border-[#e5dcd0] rounded-lg px-3.5 py-2.5 text-sm text-[#2e2721] focus:outline-none focus:border-[#8c6d3b] focus:bg-white"
                       />
                     </div>
                   </div>
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
-                      <label className="block text-xs font-semibold text-stone-700 uppercase tracking-wider mb-1">
+                      <label className="block text-xs font-semibold text-[#4a4036] uppercase tracking-wider mb-1">
                         Email Address *
                       </label>
                       <input
@@ -177,12 +177,12 @@ export default function ContactSection() {
                         placeholder="you@company.com"
                         value={formData.email}
                         onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                        className="w-full bg-stone-50 border border-stone-200 rounded-lg px-3.5 py-2.5 text-sm text-stone-900 focus:outline-none focus:border-[#8c6d3b] focus:bg-white"
+                        className="w-full bg-[#faf8f5] border border-[#e5dcd0] rounded-lg px-3.5 py-2.5 text-sm text-[#2e2721] focus:outline-none focus:border-[#8c6d3b] focus:bg-white"
                       />
                     </div>
 
                     <div>
-                      <label className="block text-xs font-semibold text-stone-700 uppercase tracking-wider mb-1">
+                      <label className="block text-xs font-semibold text-[#4a4036] uppercase tracking-wider mb-1">
                         Company Name
                       </label>
                       <input
@@ -190,14 +190,14 @@ export default function ContactSection() {
                         placeholder="Business / Organization name"
                         value={formData.company}
                         onChange={(e) => setFormData({ ...formData, company: e.target.value })}
-                        className="w-full bg-stone-50 border border-stone-200 rounded-lg px-3.5 py-2.5 text-sm text-stone-900 focus:outline-none focus:border-[#8c6d3b] focus:bg-white"
+                        className="w-full bg-[#faf8f5] border border-[#e5dcd0] rounded-lg px-3.5 py-2.5 text-sm text-[#2e2721] focus:outline-none focus:border-[#8c6d3b] focus:bg-white"
                       />
                     </div>
                   </div>
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
-                      <label className="block text-xs font-semibold text-stone-700 uppercase tracking-wider mb-1">
+                      <label className="block text-xs font-semibold text-[#4a4036] uppercase tracking-wider mb-1">
                         Project Location
                       </label>
                       <input
@@ -205,12 +205,12 @@ export default function ContactSection() {
                         placeholder="City, Area (e.g. Bengaluru, Whitefield)"
                         value={formData.location}
                         onChange={(e) => setFormData({ ...formData, location: e.target.value })}
-                        className="w-full bg-stone-50 border border-stone-200 rounded-lg px-3.5 py-2.5 text-sm text-stone-900 focus:outline-none focus:border-[#8c6d3b] focus:bg-white"
+                        className="w-full bg-[#faf8f5] border border-[#e5dcd0] rounded-lg px-3.5 py-2.5 text-sm text-[#2e2721] focus:outline-none focus:border-[#8c6d3b] focus:bg-white"
                       />
                     </div>
 
                     <div>
-                      <label className="block text-xs font-semibold text-stone-700 uppercase tracking-wider mb-1">
+                      <label className="block text-xs font-semibold text-[#4a4036] uppercase tracking-wider mb-1">
                         Approx. Area (Sq.Ft)
                       </label>
                       <input
@@ -218,31 +218,31 @@ export default function ContactSection() {
                         placeholder="e.g. 15,000 sq.ft"
                         value={formData.area}
                         onChange={(e) => setFormData({ ...formData, area: e.target.value })}
-                        className="w-full bg-stone-50 border border-stone-200 rounded-lg px-3.5 py-2.5 text-sm text-stone-900 focus:outline-none focus:border-[#8c6d3b] focus:bg-white"
+                        className="w-full bg-[#faf8f5] border border-[#e5dcd0] rounded-lg px-3.5 py-2.5 text-sm text-[#2e2721] focus:outline-none focus:border-[#8c6d3b] focus:bg-white"
                       />
                     </div>
                   </div>
 
                   <div>
-                    <label className="block text-xs font-semibold text-stone-700 uppercase tracking-wider mb-1">
+                    <label className="block text-xs font-semibold text-[#4a4036] uppercase tracking-wider mb-1">
                       Project Type
                     </label>
                     <select
                       value={formData.projectType}
                       onChange={(e) => setFormData({ ...formData, projectType: e.target.value })}
-                      className="w-full bg-stone-50 border border-stone-200 rounded-lg px-3.5 py-2.5 text-sm text-stone-900 focus:outline-none focus:border-[#8c6d3b] focus:bg-white"
+                      className="w-full bg-[#faf8f5] border border-[#e5dcd0] rounded-lg px-3.5 py-2.5 text-sm text-[#2e2721] focus:outline-none focus:border-[#8c6d3b] focus:bg-white"
                     >
-                      <option value="Corporate & Office Interiors">Corporate & Office Interiors</option>
-                      <option value="Retail Interiors">Retail Interiors</option>
-                      <option value="Hospitality Interiors">Hospitality Interiors</option>
+                      <option value="Corporate & Office Interiors">Workplaces & Office Interiors</option>
                       <option value="Healthcare Interiors">Healthcare Interiors</option>
+                      <option value="Hospitality Interiors">Hospitality Interiors</option>
+                      <option value="Retail Interiors">Retail Interiors</option>
                       <option value="Commercial Interiors">Commercial Interiors</option>
                       <option value="Turnkey Interior Solutions">Turnkey Interior Solutions</option>
                     </select>
                   </div>
 
                   <div>
-                    <label className="block text-xs font-semibold text-stone-700 uppercase tracking-wider mb-1">
+                    <label className="block text-xs font-semibold text-[#4a4036] uppercase tracking-wider mb-1">
                       Tell Us About Your Project
                     </label>
                     <textarea
@@ -250,7 +250,7 @@ export default function ContactSection() {
                       placeholder="Brief details regarding space requirements, timeline, or current shell status..."
                       value={formData.details}
                       onChange={(e) => setFormData({ ...formData, details: e.target.value })}
-                      className="w-full bg-stone-50 border border-stone-200 rounded-lg px-3.5 py-2.5 text-sm text-stone-900 focus:outline-none focus:border-[#8c6d3b] focus:bg-white"
+                      className="w-full bg-[#faf8f5] border border-[#e5dcd0] rounded-lg px-3.5 py-2.5 text-sm text-[#2e2721] focus:outline-none focus:border-[#8c6d3b] focus:bg-white"
                     />
                   </div>
 
@@ -262,7 +262,7 @@ export default function ContactSection() {
                       <span>{contactSection.submitText}</span>
                       <Send className="w-4 h-4" />
                     </button>
-                    <p className="text-[11px] text-stone-400 text-center mt-2.5">
+                    <p className="text-[11px] text-[#8c8275] text-center mt-2.5">
                       No spam. No obligations. Just straightforward expert interior advice.
                     </p>
                   </div>

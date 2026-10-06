@@ -47,7 +47,7 @@ export default function ArrowScroller({ children, className = '' }) {
         onClick={() => nudge(-1)}
         disabled={!canLeft}
         aria-label="Scroll left"
-        className={`absolute z-20 left-0 top-[38%] -translate-y-1/2 -translate-x-1/2 w-11 h-11 rounded-full bg-[#141413] text-white shadow-xl flex items-center justify-center transition-all duration-200 hover:bg-[#c5a059] hover:text-[#141413] hover:scale-110 disabled:opacity-0 disabled:pointer-events-none ${
+        className={`absolute z-20 left-0 top-[38%] -translate-y-1/2 -translate-x-1/2 w-11 h-11 rounded-full bg-[#faf6ee] text-[#4a4036] border border-[#e5dcd0] shadow-md flex items-center justify-center transition-all duration-200 hover:bg-[#c5a059] hover:text-white hover:border-[#c5a059] hover:scale-105 disabled:opacity-0 disabled:pointer-events-none cursor-pointer ${
           canLeft ? 'opacity-100' : 'opacity-0'
         }`}
       >
@@ -57,7 +57,7 @@ export default function ArrowScroller({ children, className = '' }) {
         onClick={() => nudge(1)}
         disabled={!canRight}
         aria-label="Scroll right"
-        className={`absolute z-20 right-0 top-[38%] -translate-y-1/2 translate-x-1/2 w-11 h-11 rounded-full bg-[#141413] text-white shadow-xl flex items-center justify-center transition-all duration-200 hover:bg-[#c5a059] hover:text-[#141413] hover:scale-110 disabled:opacity-0 disabled:pointer-events-none ${
+        className={`absolute z-20 right-0 top-[38%] -translate-y-1/2 translate-x-1/2 w-11 h-11 rounded-full bg-[#faf6ee] text-[#4a4036] border border-[#e5dcd0] shadow-md flex items-center justify-center transition-all duration-200 hover:bg-[#c5a059] hover:text-white hover:border-[#c5a059] hover:scale-105 disabled:opacity-0 disabled:pointer-events-none cursor-pointer ${
           canRight ? 'opacity-100' : 'opacity-0'
         }`}
       >

@@ -10,7 +10,7 @@ export default function StatsBar() {
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 divide-y md:divide-y-0 md:divide-x divide-[#e7e0d4] items-center">
           {/* Stat 1 */}
           <div className="p-3 sm:p-5 text-center md:text-left flex flex-col justify-center">
-            <span className="font-serif text-3xl sm:text-2xl lg:text-5xl font-semibold text-[#141413] tracking-tight">
+            <span className="font-serif text-3xl sm:text-2xl lg:text-5xl font-semibold text-[#2e2721] tracking-tight">
               {stats[0].value}
             </span>
             <span className="text-xs sm:text-sm font-medium text-[#78716c] uppercase tracking-wider mt-1.5">
@@ -20,7 +20,7 @@ export default function StatsBar() {
 
           {/* Stat 2 */}
           <div className="p-3 sm:p-5 text-center md:text-left flex flex-col justify-center">
-            <span className="font-serif text-3xl sm:text-4xl lg:text-5xl font-semibold text-[#141413] tracking-tight">
+            <span className="font-serif text-3xl sm:text-4xl lg:text-5xl font-semibold text-[#2e2721] tracking-tight">
               {stats[1].value}
             </span>
             <span className="text-xs sm:text-sm font-medium text-[#78716c] uppercase tracking-wider mt-1.5">
@@ -30,7 +30,7 @@ export default function StatsBar() {
 
           {/* Stat 3 */}
           <div className="p-3 sm:p-5 text-center md:text-left flex flex-col justify-center">
-            <span className="font-serif text-3xl sm:text-4xl lg:text-5xl font-semibold text-[#141413] tracking-tight">
+            <span className="font-serif text-3xl sm:text-4xl lg:text-5xl font-semibold text-[#2e2721] tracking-tight">
               {stats[2].value}
             </span>
             <span className="text-xs sm:text-sm font-medium text-[#78716c] uppercase tracking-wider mt-1.5">
@@ -40,7 +40,7 @@ export default function StatsBar() {
 
           {/* Stat 4 */}
           <div className="p-3 sm:p-5 text-center md:text-left flex flex-col justify-center">
-            <span className="font-serif text-2xl sm:text-3xl lg:text-4xl font-semibold text-[#141413] tracking-tight">
+            <span className="font-serif text-2xl sm:text-3xl lg:text-4xl font-semibold text-[#2e2721] tracking-tight">
               End-to-End
             </span>
             <span className="text-xs sm:text-sm font-medium text-[#78716c] uppercase tracking-wider mt-1.5">

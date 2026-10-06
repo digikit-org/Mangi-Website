@@ -17,7 +17,7 @@ export default function Industries({ onSelectIndustry }) {
             <span className="text-[11px] sm:text-xs font-semibold uppercase tracking-[0.25em] text-[#8c6d3b] block mb-3">
               {industries.badge}
             </span>
-            <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-medium text-[#141413] tracking-tight">
+            <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-medium text-[#2e2721] tracking-tight">
               {industries.title}
             </h2>
           </div>
@@ -28,7 +28,7 @@ export default function Industries({ onSelectIndustry }) {
             </p>
             <a
               href="#contact"
-              className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-semibold text-[#141413] hover:text-[#c5a059] transition-colors whitespace-nowrap group"
+              className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-semibold text-[#2e2721] hover:text-[#c5a059] transition-colors whitespace-nowrap group"
             >
               <span>Explore Industries</span>
               <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
@@ -56,8 +56,8 @@ export default function Industries({ onSelectIndustry }) {
                     draggable={false}
                   />
 
-                  {/* Gradient Dark Overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/35 to-black/10 group-hover:from-black/95 transition-colors duration-300" />
+                  {/* Gradient Warm Overlay — NO BLACK */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#2e2721]/80 via-[#2e2721]/30 to-transparent group-hover:from-[#2e2721]/90 transition-colors duration-300" />
 
                   {/* Bottom Details */}
                   <div className="absolute inset-x-0 bottom-0 p-5 flex flex-col justify-end">
@@ -65,11 +65,11 @@ export default function Industries({ onSelectIndustry }) {
                       <h3 className="font-serif text-lg sm:text-xl font-semibold text-white tracking-wide group-hover:text-[#caa368] transition-colors">
                         {ind.title}
                       </h3>
-                      <div className="w-8 h-8 rounded-full bg-white/20 backdrop-blur-md border border-white/30 flex items-center justify-center text-white group-hover:bg-[#c5a059] group-hover:border-[#c5a059] group-hover:text-[#141413] transition-all flex-shrink-0">
+                      <div className="w-8 h-8 rounded-full bg-white/20 backdrop-blur-md border border-white/30 flex items-center justify-center text-white group-hover:bg-[#c5a059] group-hover:border-[#c5a059] group-hover:text-white transition-all flex-shrink-0">
                         <ArrowUpRight className="w-4 h-4" />
                       </div>
                     </div>
-                    <p className="text-[11px] text-stone-300 line-clamp-2 mt-1.5 opacity-80 group-hover:opacity-100 transition-opacity">
+                    <p className="text-[11px] text-[#f5efe6] line-clamp-2 mt-1.5 opacity-80 group-hover:opacity-100 transition-opacity">
                       {ind.description}
                     </p>
                   </div>
