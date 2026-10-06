@@ -41,17 +41,17 @@ export default function ProjectInquiryModal({
 
   return (
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4 bg-black/75 backdrop-blur-sm animate-fadeIn"
+      className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4 bg-[#2e2721]/50 backdrop-blur-sm animate-fadeIn"
       onClick={onClose}
     >
       <div
-        className="relative w-full max-w-xl bg-white rounded-2xl shadow-2xl border border-stone-200 overflow-hidden max-h-[90vh] flex flex-col"
+        className="relative w-full max-w-xl bg-white rounded-2xl shadow-2xl border border-[#e8ded0] overflow-hidden max-h-[90vh] flex flex-col"
         onClick={(e) => e.stopPropagation()}
       >
-        {/* Header */}
-        <div className="bg-[#141413] px-6 py-5 text-white flex items-center justify-between shrink-0">
+        {/* Header — Light Beige Theme */}
+        <div className="bg-[#f5efe6] border-b border-[#e7e0d4] px-6 py-5 text-[#2e2721] flex items-center justify-between shrink-0">
           <div>
-            <span className="text-[10px] uppercase font-bold tracking-[0.2em] text-[#caa368] block">
+            <span className="text-[10px] uppercase font-bold tracking-[0.2em] text-[#8c6d3b] block">
               Mangi Interiors — Consultation
             </span>
             <h3 className="font-serif text-xl sm:text-2xl font-semibold">
@@ -60,7 +60,7 @@ export default function ProjectInquiryModal({
           </div>
           <button
             onClick={onClose}
-            className="w-8 h-8 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center text-white transition-colors cursor-pointer"
+            className="w-8 h-8 rounded-full bg-[#fdfbf7] hover:bg-[#ede5d6] border border-[#e5dcd0] flex items-center justify-center text-[#2e2721] transition-colors cursor-pointer"
             aria-label="Close"
           >
             <X className="w-5 h-5" />
@@ -71,10 +71,10 @@ export default function ProjectInquiryModal({
         {submitted ? (
           <div className="p-8 sm:p-12 text-center flex flex-col items-center justify-center">
             <CheckCircle2 className="w-16 h-16 text-emerald-600 mb-4 animate-bounce" />
-            <h4 className="font-serif text-2xl font-semibold text-[#141413] mb-2">
+            <h4 className="font-serif text-2xl font-semibold text-[#2e2721] mb-2">
               Inquiry Received!
             </h4>
-            <p className="text-sm text-stone-600 max-w-md leading-relaxed">
+            <p className="text-sm text-[#5c5349] max-w-md leading-relaxed">
               Thank you for reaching out to Mangi Interiors. Our commercial
               project team will review your requirements and get in touch within
               24 business hours.
@@ -93,7 +93,7 @@ export default function ProjectInquiryModal({
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div>
-                <label className="block text-xs font-semibold uppercase tracking-wider text-stone-700 mb-1">
+                <label className="block text-xs font-semibold uppercase tracking-wider text-[#4a4036] mb-1">
                   Name *
                 </label>
                 <input
@@ -104,12 +104,12 @@ export default function ProjectInquiryModal({
                   onChange={(e) =>
                     setFormData({ ...formData, name: e.target.value })
                   }
-                  className="w-full bg-stone-50 border border-stone-200 rounded-lg px-3.5 py-2.5 text-sm text-stone-900 focus:outline-none focus:border-[#8c6d3b] focus:bg-white"
+                  className="w-full bg-[#faf8f5] border border-[#e5dcd0] rounded-lg px-3.5 py-2.5 text-sm text-[#2e2721] focus:outline-none focus:border-[#8c6d3b] focus:bg-white"
                 />
               </div>
 
               <div>
-                <label className="block text-xs font-semibold uppercase tracking-wider text-stone-700 mb-1">
+                <label className="block text-xs font-semibold uppercase tracking-wider text-[#4a4036] mb-1">
                   Phone / WhatsApp *
                 </label>
                 <input
@@ -120,14 +120,14 @@ export default function ProjectInquiryModal({
                   onChange={(e) =>
                     setFormData({ ...formData, phone: e.target.value })
                   }
-                  className="w-full bg-stone-50 border border-stone-200 rounded-lg px-3.5 py-2.5 text-sm text-stone-900 focus:outline-none focus:border-[#8c6d3b] focus:bg-white"
+                  className="w-full bg-[#faf8f5] border border-[#e5dcd0] rounded-lg px-3.5 py-2.5 text-sm text-[#2e2721] focus:outline-none focus:border-[#8c6d3b] focus:bg-white"
                 />
               </div>
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div>
-                <label className="block text-xs font-semibold uppercase tracking-wider text-stone-700 mb-1">
+                <label className="block text-xs font-semibold uppercase tracking-wider text-[#4a4036] mb-1">
                   Email Address *
                 </label>
                 <input
@@ -138,12 +138,12 @@ export default function ProjectInquiryModal({
                   onChange={(e) =>
                     setFormData({ ...formData, email: e.target.value })
                   }
-                  className="w-full bg-stone-50 border border-stone-200 rounded-lg px-3.5 py-2.5 text-sm text-stone-900 focus:outline-none focus:border-[#8c6d3b] focus:bg-white"
+                  className="w-full bg-[#faf8f5] border border-[#e5dcd0] rounded-lg px-3.5 py-2.5 text-sm text-[#2e2721] focus:outline-none focus:border-[#8c6d3b] focus:bg-white"
                 />
               </div>
 
               <div>
-                <label className="block text-xs font-semibold uppercase tracking-wider text-stone-700 mb-1">
+                <label className="block text-xs font-semibold uppercase tracking-wider text-[#4a4036] mb-1">
                   Company Name
                 </label>
                 <input
@@ -153,14 +153,14 @@ export default function ProjectInquiryModal({
                   onChange={(e) =>
                     setFormData({ ...formData, company: e.target.value })
                   }
-                  className="w-full bg-stone-50 border border-stone-200 rounded-lg px-3.5 py-2.5 text-sm text-stone-900 focus:outline-none focus:border-[#8c6d3b] focus:bg-white"
+                  className="w-full bg-[#faf8f5] border border-[#e5dcd0] rounded-lg px-3.5 py-2.5 text-sm text-[#2e2721] focus:outline-none focus:border-[#8c6d3b] focus:bg-white"
                 />
               </div>
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div>
-                <label className="block text-xs font-semibold uppercase tracking-wider text-stone-700 mb-1">
+                <label className="block text-xs font-semibold uppercase tracking-wider text-[#4a4036] mb-1">
                   Project Location
                 </label>
                 <input
@@ -170,12 +170,12 @@ export default function ProjectInquiryModal({
                   onChange={(e) =>
                     setFormData({ ...formData, location: e.target.value })
                   }
-                  className="w-full bg-stone-50 border border-stone-200 rounded-lg px-3.5 py-2.5 text-sm text-stone-900 focus:outline-none focus:border-[#8c6d3b] focus:bg-white"
+                  className="w-full bg-[#faf8f5] border border-[#e5dcd0] rounded-lg px-3.5 py-2.5 text-sm text-[#2e2721] focus:outline-none focus:border-[#8c6d3b] focus:bg-white"
                 />
               </div>
 
               <div>
-                <label className="block text-xs font-semibold uppercase tracking-wider text-stone-700 mb-1">
+                <label className="block text-xs font-semibold uppercase tracking-wider text-[#4a4036] mb-1">
                   Approx. Area
                 </label>
                 <input
@@ -185,13 +185,13 @@ export default function ProjectInquiryModal({
                   onChange={(e) =>
                     setFormData({ ...formData, area: e.target.value })
                   }
-                  className="w-full bg-stone-50 border border-stone-200 rounded-lg px-3.5 py-2.5 text-sm text-stone-900 focus:outline-none focus:border-[#8c6d3b] focus:bg-white"
+                  className="w-full bg-[#faf8f5] border border-[#e5dcd0] rounded-lg px-3.5 py-2.5 text-sm text-[#2e2721] focus:outline-none focus:border-[#8c6d3b] focus:bg-white"
                 />
               </div>
             </div>
 
             <div>
-              <label className="block text-xs font-semibold uppercase tracking-wider text-stone-700 mb-1">
+              <label className="block text-xs font-semibold uppercase tracking-wider text-[#4a4036] mb-1">
                 Project Type
               </label>
               <select
@@ -199,18 +199,18 @@ export default function ProjectInquiryModal({
                 onChange={(e) =>
                   setFormData({ ...formData, projectType: e.target.value })
                 }
-                className="w-full bg-stone-50 border border-stone-200 rounded-lg px-3.5 py-2.5 text-sm text-stone-900 focus:outline-none focus:border-[#8c6d3b] focus:bg-white"
+                className="w-full bg-[#faf8f5] border border-[#e5dcd0] rounded-lg px-3.5 py-2.5 text-sm text-[#2e2721] focus:outline-none focus:border-[#8c6d3b] focus:bg-white"
               >
-                <option value="Corporate & Office Interiors">
-                  Corporate & Office Interiors
-                </option>
-                <option value="Retail Interiors">Retail Interiors</option>
-                <option value="Hospitality Interiors">
-                  Hospitality Interiors
-                </option>
                 <option value="Healthcare Interiors">
                   Healthcare Interiors
                 </option>
+                <option value="Hospitality Interiors">
+                  Hospitality Interiors
+                </option>
+                <option value="Corporate & Office Interiors">
+                  Workplaces & Office Interiors
+                </option>
+                <option value="Retail Interiors">Retail Interiors</option>
                 <option value="Commercial Interiors">
                   Commercial Interiors
                 </option>
@@ -221,7 +221,7 @@ export default function ProjectInquiryModal({
             </div>
 
             <div>
-              <label className="block text-xs font-semibold uppercase tracking-wider text-stone-700 mb-1">
+              <label className="block text-xs font-semibold uppercase tracking-wider text-[#4a4036] mb-1">
                 Tell Us About Your Project
               </label>
               <textarea
@@ -231,7 +231,7 @@ export default function ProjectInquiryModal({
                 onChange={(e) =>
                   setFormData({ ...formData, details: e.target.value })
                 }
-                className="w-full bg-stone-50 border border-stone-200 rounded-lg px-3.5 py-2 text-sm text-stone-900 focus:outline-none focus:border-[#8c6d3b] focus:bg-white"
+                className="w-full bg-[#faf8f5] border border-[#e5dcd0] rounded-lg px-3.5 py-2 text-sm text-[#2e2721] focus:outline-none focus:border-[#8c6d3b] focus:bg-white"
               />
             </div>
 
@@ -243,18 +243,18 @@ export default function ProjectInquiryModal({
                 <span>Submit & Get a Free Consultation</span>
                 <Send className="w-4 h-4" />
               </button>
-              <p className="text-[11px] text-stone-400 text-center mt-2">
+              <p className="text-[11px] text-[#8c8275] text-center mt-2">
                 Direct:{" "}
                 <a
                   href="tel:+918088196750"
-                  className="text-stone-700 font-semibold underline"
+                  className="text-[#3a322a] font-semibold underline"
                 >
                   +91 80881 96750
                 </a>{" "}
                 |{" "}
                 <a
                   href="mailto:bapanmistry@mangiinteriors.com"
-                  className="text-stone-700 font-semibold underline"
+                  className="text-[#3a322a] font-semibold underline"
                 >
                   bapanmistry@mangiinteriors.com
                 </a>

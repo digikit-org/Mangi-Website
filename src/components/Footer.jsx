@@ -6,7 +6,7 @@ export default function Footer() {
   const { footer } = siteConfig;
 
   return (
-    <footer className="w-full bg-[#fdfbf7] border-t border-[#eae3d5] text-[#141413] pt-10 sm:pt-12 pb-6">
+    <footer className="w-full bg-[#fdfbf7] border-t border-[#eae3d5] text-[#2e2721] pt-10 sm:pt-12 pb-6">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-10 pb-10 border-b border-[#eae3d5]">
           {/* Column 1: Brand Info */}
@@ -24,7 +24,7 @@ export default function Footer() {
             <p className="text-xs sm:text-sm font-semibold text-[#8c6d3b] tracking-wider uppercase mb-1">
               {footer.tagline}
             </p>
-            <p className="text-xs text-stone-600 leading-relaxed mb-5">
+            <p className="text-xs text-[#6e6459] leading-relaxed mb-5">
               {footer.subTagline}
             </p>
 
@@ -34,7 +34,7 @@ export default function Footer() {
                 href="https://linkedin.com"
                 target="_blank"
                 rel="noreferrer"
-                className="w-8 h-8 rounded-full border border-stone-200 flex items-center justify-center text-stone-600 hover:text-white hover:bg-[#141413] hover:border-[#141413] transition-colors"
+                className="w-8 h-8 rounded-full border border-[#eae3d5] bg-white flex items-center justify-center text-[#6e6459] hover:text-white hover:bg-[#c5a059] hover:border-[#c5a059] transition-colors"
                 aria-label="LinkedIn"
               >
                 <svg className="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24">
@@ -45,7 +45,7 @@ export default function Footer() {
                 href="https://instagram.com"
                 target="_blank"
                 rel="noreferrer"
-                className="w-8 h-8 rounded-full border border-stone-200 flex items-center justify-center text-stone-600 hover:text-white hover:bg-[#141413] hover:border-[#141413] transition-colors"
+                className="w-8 h-8 rounded-full border border-[#eae3d5] bg-white flex items-center justify-center text-[#6e6459] hover:text-white hover:bg-[#c5a059] hover:border-[#c5a059] transition-colors"
                 aria-label="Instagram"
               >
                 <svg className="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24">
@@ -56,7 +56,7 @@ export default function Footer() {
                 href="https://youtube.com"
                 target="_blank"
                 rel="noreferrer"
-                className="w-8 h-8 rounded-full border border-stone-200 flex items-center justify-center text-stone-600 hover:text-white hover:bg-[#141413] hover:border-[#141413] transition-colors"
+                className="w-8 h-8 rounded-full border border-[#eae3d5] bg-white flex items-center justify-center text-[#6e6459] hover:text-white hover:bg-[#c5a059] hover:border-[#c5a059] transition-colors"
                 aria-label="YouTube"
               >
                 <svg className="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24">
@@ -68,7 +68,7 @@ export default function Footer() {
 
           {/* Column 2: Quick Links */}
           <div>
-            <h4 className="font-sans text-xs font-bold uppercase tracking-[0.2em] text-[#141413] mb-4">
+            <h4 className="font-sans text-xs font-bold uppercase tracking-[0.2em] text-[#2e2721] mb-4">
               Quick Links
             </h4>
             <ul className="space-y-2.5">
@@ -76,7 +76,7 @@ export default function Footer() {
                 <li key={link.label}>
                   <a
                     href={link.href}
-                    className="text-xs sm:text-sm text-stone-600 hover:text-[#8c6d3b] transition-colors"
+                    className="text-xs sm:text-sm text-[#6e6459] hover:text-[#8c6d3b] transition-colors"
                   >
                     {link.label}
                   </a>
@@ -85,9 +85,9 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Column 3: Commercial Services List from Google Doc */}
+          {/* Column 3: Commercial Services List */}
           <div>
-            <h4 className="font-sans text-xs font-bold uppercase tracking-[0.2em] text-[#141413] mb-4">
+            <h4 className="font-sans text-xs font-bold uppercase tracking-[0.2em] text-[#2e2721] mb-4">
               Services
             </h4>
             <ul className="space-y-2.5">
@@ -95,7 +95,7 @@ export default function Footer() {
                 <li key={serviceName}>
                   <a
                     href="#services"
-                    className="text-xs sm:text-sm text-stone-600 hover:text-[#8c6d3b] transition-colors"
+                    className="text-xs sm:text-sm text-[#6e6459] hover:text-[#8c6d3b] transition-colors"
                   >
                     {serviceName}
                   </a>
@@ -104,17 +104,17 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Column 4: Contact Info from Google Doc */}
+          {/* Column 4: Contact Info */}
           <div>
-            <h4 className="font-sans text-xs font-bold uppercase tracking-[0.2em] text-[#141413] mb-4">
+            <h4 className="font-sans text-xs font-bold uppercase tracking-[0.2em] text-[#2e2721] mb-4">
               Contact
             </h4>
-            <div className="space-y-3 text-xs sm:text-sm text-stone-600">
+            <div className="space-y-3 text-xs sm:text-sm text-[#6e6459]">
               <div className="flex items-center gap-2.5">
                 <Phone className="w-4 h-4 text-[#8c6d3b] shrink-0" />
                 <a
                   href={`tel:${footer.contactInfo.phone.replace(/\s+/g, "")}`}
-                  className="hover:text-stone-900 font-medium"
+                  className="hover:text-[#2e2721] font-medium"
                 >
                   {footer.contactInfo.phone}
                 </a>
@@ -142,25 +142,24 @@ export default function Footer() {
                 <Mail className="w-4 h-4 text-[#8c6d3b] shrink-0" />
                 <a
                   href={`mailto:${footer.contactInfo.email}`}
-                  className="hover:text-stone-900 font-medium break-all"
+                  className="hover:text-[#2e2721] font-medium break-all"
                 >
                   {footer.contactInfo.email}
                 </a>
               </div>
             </div>
-
           </div>
         </div>
 
         {/* Sub-footer Bar */}
-        <div className="pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-stone-500">
+        <div className="pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[#78716c]">
           <p>{footer.copyright}</p>
           <div className="flex items-center gap-4">
-            <a href="#" className="hover:text-stone-900 transition-colors">
+            <a href="#" className="hover:text-[#2e2721] transition-colors">
               Privacy Policy
             </a>
             <span>|</span>
-            <a href="#" className="hover:text-stone-900 transition-colors">
+            <a href="#" className="hover:text-[#2e2721] transition-colors">
               Terms & Conditions
             </a>
           </div>

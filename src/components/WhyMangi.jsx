@@ -75,7 +75,7 @@ export default function WhyMangi({ onOpenConsultation }) {
           <span className="text-[11px] sm:text-xs font-semibold uppercase tracking-[0.25em] text-[#8c6d3b] block mb-3">
             {whyMangi.badge}
           </span>
-          <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-medium text-[#141413] tracking-tight mb-4">
+          <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-medium text-[#2e2721] tracking-tight mb-4">
             {whyMangi.title}
           </h2>
           <p className="text-sm sm:text-base text-[#6d665e] leading-relaxed">
@@ -117,7 +117,7 @@ export default function WhyMangi({ onOpenConsultation }) {
                       <div className={`h-1 w-10 rounded-full mb-3 ${s.bar}`} />
 
                       <h3
-                        className={`font-serif text-xl sm:text-2xl font-semibold text-[#141413] mb-3 transition-colors ${s.titleHover}`}
+                        className={`font-serif text-xl sm:text-2xl font-semibold text-[#2e2721] mb-3 transition-colors ${s.titleHover}`}
                       >
                         {pillar.title}
                       </h3>
