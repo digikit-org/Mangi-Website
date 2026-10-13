@@ -145,111 +145,83 @@ export default function Hero({ onOpenConsultation }) {
                 space.
               </p>
 
-              {isBooked ? (
-                <div className="py-8 text-center flex flex-col items-center justify-center space-y-2">
-                  <CheckCircle2 className="w-12 h-12 text-emerald-600 animate-bounce" />
-                  <h4 className="font-serif text-xl font-semibold text-[#2e2721]">
-                    Consultation Requested!
-                  </h4>
-                  <p className="text-xs text-[#5c5349] max-w-xs">
-                    Thank you! Our lead interior architect will call you within
-                    24 hours.
+              <form
+                action="https:///mail.digikit.in/forms/mangi/website/contact.php"
+                method="POST"
+                className="space-y-3.5"
+              >
+                <div>
+                  <label className="block text-[11px] font-semibold text-[#4a4036] uppercase tracking-wider mb-1">
+                    Your Name *
+                  </label>
+                  <input
+                    name="name"
+                    type="text"
+                    required
+                    placeholder="e.g. Rahul Sharma"
+                    className="w-full bg-[#fdfbf7] border border-[#e5dcd0] rounded-lg px-3.5 py-2.5 text-xs sm:text-sm text-[#2e2721] focus:outline-none focus:border-[#c5a059] focus:bg-white"
+                  />
+                </div>
+
+                <div>
+                  <label className="block text-[11px] font-semibold text-[#4a4036] uppercase tracking-wider mb-1">
+                    Phone / WhatsApp *
+                  </label>
+                  <input
+                    name="phone"
+                    type="tel"
+                    required
+                    placeholder="+91 80881 96750"
+                    className="w-full bg-[#fdfbf7] border border-[#e5dcd0] rounded-lg px-3.5 py-2.5 text-xs sm:text-sm text-[#2e2721] focus:outline-none focus:border-[#c5a059] focus:bg-white"
+                  />
+                </div>
+
+                <div>
+                  <label className="block text-[11px] font-semibold text-[#4a4036] uppercase tracking-wider mb-1">
+                    Service Needed *
+                  </label>
+                  <select
+                    name="service"
+                    required
+                    className="w-full bg-[#fdfbf7] border border-[#e5dcd0] rounded-lg px-3.5 py-2.5 text-xs sm:text-sm text-[#2e2721] focus:outline-none focus:border-[#c5a059] focus:bg-white"
+                  >
+                    <option value="Healthcare">Healthcare Interiors</option>
+                    <option value="Hospitality">Hospitality Interiors</option>
+                    <option value="Workplaces & Office">
+                      Workplaces & Corporate Offices
+                    </option>
+                    <option value="Retail">Retail & Showroom Interiors</option>
+                    <option value="Turnkey Commercial">
+                      Turnkey Commercial Execution
+                    </option>
+                  </select>
+                </div>
+
+                <div>
+                  <label className="block text-[11px] font-semibold text-[#4a4036] uppercase tracking-wider mb-1">
+                    Approx. Area or Location
+                  </label>
+                  <input
+                    name="area"
+                    type="text"
+                    placeholder="e.g. 12,000 sq.ft, Bengaluru"
+                    className="w-full bg-[#fdfbf7] border border-[#e5dcd0] rounded-lg px-3.5 py-2.5 text-xs sm:text-sm text-[#2e2721] focus:outline-none focus:border-[#c5a059] focus:bg-white"
+                  />
+                </div>
+
+                <div className="pt-1.5">
+                  <button
+                    type="submit"
+                    className="w-full gold-btn py-3 rounded-lg font-semibold text-xs sm:text-sm tracking-wider uppercase flex items-center justify-center gap-2 cursor-pointer shadow-md"
+                  >
+                    <span>Book Free Consultation</span>
+                    <ArrowRight className="w-4 h-4" />
+                  </button>
+                  <p className="text-[10px] text-[#8c8275] text-center mt-2">
+                    Zero obligations • Direct response from our project team
                   </p>
                 </div>
-              ) : (
-                <form onSubmit={handleBookingSubmit} className="space-y-3.5">
-                  <div>
-                    <label className="block text-[11px] font-semibold text-[#4a4036] uppercase tracking-wider mb-1">
-                      Your Name *
-                    </label>
-                    <input
-                      type="text"
-                      required
-                      placeholder="e.g. Rahul Sharma"
-                      value={bookingData.name}
-                      onChange={(e) =>
-                        setBookingData({ ...bookingData, name: e.target.value })
-                      }
-                      className="w-full bg-[#fdfbf7] border border-[#e5dcd0] rounded-lg px-3.5 py-2.5 text-xs sm:text-sm text-[#2e2721] focus:outline-none focus:border-[#c5a059] focus:bg-white"
-                    />
-                  </div>
-
-                  <div>
-                    <label className="block text-[11px] font-semibold text-[#4a4036] uppercase tracking-wider mb-1">
-                      Phone / WhatsApp *
-                    </label>
-                    <input
-                      type="tel"
-                      required
-                      placeholder="+91 80881 96750"
-                      value={bookingData.phone}
-                      onChange={(e) =>
-                        setBookingData({
-                          ...bookingData,
-                          phone: e.target.value,
-                        })
-                      }
-                      className="w-full bg-[#fdfbf7] border border-[#e5dcd0] rounded-lg px-3.5 py-2.5 text-xs sm:text-sm text-[#2e2721] focus:outline-none focus:border-[#c5a059] focus:bg-white"
-                    />
-                  </div>
-
-                  <div>
-                    <label className="block text-[11px] font-semibold text-[#4a4036] uppercase tracking-wider mb-1">
-                      Service Needed *
-                    </label>
-                    <select
-                      value={bookingData.service}
-                      onChange={(e) =>
-                        setBookingData({
-                          ...bookingData,
-                          service: e.target.value,
-                        })
-                      }
-                      className="w-full bg-[#fdfbf7] border border-[#e5dcd0] rounded-lg px-3.5 py-2.5 text-xs sm:text-sm text-[#2e2721] focus:outline-none focus:border-[#c5a059] focus:bg-white"
-                    >
-                      <option value="Healthcare">Healthcare Interiors</option>
-                      <option value="Hospitality">Hospitality Interiors</option>
-                      <option value="Workplaces & Office">
-                        Workplaces & Corporate Offices
-                      </option>
-                      <option value="Retail">
-                        Retail & Showroom Interiors
-                      </option>
-                      <option value="Turnkey Commercial">
-                        Turnkey Commercial Execution
-                      </option>
-                    </select>
-                  </div>
-
-                  <div>
-                    <label className="block text-[11px] font-semibold text-[#4a4036] uppercase tracking-wider mb-1">
-                      Approx. Area or Location
-                    </label>
-                    <input
-                      type="text"
-                      placeholder="e.g. 12,000 sq.ft, Bengaluru"
-                      value={bookingData.area}
-                      onChange={(e) =>
-                        setBookingData({ ...bookingData, area: e.target.value })
-                      }
-                      className="w-full bg-[#fdfbf7] border border-[#e5dcd0] rounded-lg px-3.5 py-2.5 text-xs sm:text-sm text-[#2e2721] focus:outline-none focus:border-[#c5a059] focus:bg-white"
-                    />
-                  </div>
-
-                  <div className="pt-1.5">
-                    <button
-                      type="submit"
-                      className="w-full gold-btn py-3 rounded-lg font-semibold text-xs sm:text-sm tracking-wider uppercase flex items-center justify-center gap-2 cursor-pointer shadow-md"
-                    >
-                      <span>Book Free Consultation</span>
-                      <ArrowRight className="w-4 h-4" />
-                    </button>
-                    <p className="text-[10px] text-[#8c8275] text-center mt-2">
-                      Zero obligations • Direct response from our project team
-                    </p>
-                  </div>
-                </form>
-              )}
+              </form>
             </div>
           </div>
         </div>
