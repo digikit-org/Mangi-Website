@@ -146,67 +146,110 @@ export default function Hero({ onOpenConsultation }) {
               </p>
 
               <form
-                action="https:///mail.digikit.in/forms/mangi/website/contact.php"
+                action={"https://mail.digikit.in/forms/mangi/contact.php"}
                 method="POST"
                 className="space-y-3.5"
               >
                 <div>
-                  <label className="block text-[11px] font-semibold text-[#4a4036] uppercase tracking-wider mb-1">
-                    Your Name *
+                  <label className="block text-[11px] font-semibold text-[#423c36] uppercase tracking-wider mb-1">
+                    Full Name *
                   </label>
+
                   <input
                     name="name"
                     type="text"
                     required
-                    placeholder="e.g. Rahul Sharma"
-                    className="w-full bg-[#fdfbf7] border border-[#e5dcd0] rounded-lg px-3.5 py-2.5 text-xs sm:text-sm text-[#2e2721] focus:outline-none focus:border-[#c5a059] focus:bg-white"
+                    placeholder="Your Full Name"
+                    minLength={2}
+                    maxLength={60}
+                    pattern="[A-Za-z\u00C0-\u024F]+(?:[ '-][A-Za-z\u00C0-\u024F]+)*"
+                    title="Enter a valid name using letters, spaces, apostrophes, or hyphens."
+                    onInput={(e) => {
+                      e.target.value = e.target.value.replace(
+                        /[^A-Za-z\u00C0-\u024F '\-]/g,
+                        "",
+                      );
+                    }}
+                    className="w-full px-3 py-2 bg-white border border-[#dcd3c3] rounded-lg text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-[#c5a059] transition-all text-[#1c1917]"
                   />
                 </div>
 
                 <div>
-                  <label className="block text-[11px] font-semibold text-[#4a4036] uppercase tracking-wider mb-1">
+                  <label className="block text-[11px] font-semibold text-[#423c36] uppercase tracking-wider mb-1">
                     Phone / WhatsApp *
                   </label>
+
                   <input
                     name="phone"
                     type="tel"
                     required
-                    placeholder="+91 80881 96750"
-                    className="w-full bg-[#fdfbf7] border border-[#e5dcd0] rounded-lg px-3.5 py-2.5 text-xs sm:text-sm text-[#2e2721] focus:outline-none focus:border-[#c5a059] focus:bg-white"
+                    placeholder="Enter 10-digit mobile number"
+                    minLength={10}
+                    maxLength={10}
+                    pattern="[0-9]{10}"
+                    inputMode="numeric"
+                    onInput={(e) => {
+                      e.target.value = e.target.value
+                        .replace(/\D/g, "")
+                        .slice(0, 10);
+                    }}
+                    title="Please enter exactly 10 digits."
+                    className="w-full px-3 py-2 bg-white border border-[#dcd3c3] rounded-lg text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-[#c5a059] transition-all text-[#1c1917]"
                   />
                 </div>
 
                 <div>
-                  <label className="block text-[11px] font-semibold text-[#4a4036] uppercase tracking-wider mb-1">
-                    Service Needed *
+                  <label className="block text-[11px] font-semibold text-[#423c36] uppercase tracking-wider mb-1">
+                    Service Required *
                   </label>
+
                   <select
                     name="service"
                     required
-                    className="w-full bg-[#fdfbf7] border border-[#e5dcd0] rounded-lg px-3.5 py-2.5 text-xs sm:text-sm text-[#2e2721] focus:outline-none focus:border-[#c5a059] focus:bg-white"
+                    defaultValue=""
+                    className="w-full px-2.5 py-2 bg-white border border-[#dcd3c3] rounded-lg text-xs focus:outline-none focus:ring-2 focus:ring-[#c5a059] text-[#1c1917]"
                   >
-                    <option value="Healthcare">Healthcare Interiors</option>
-                    <option value="Hospitality">Hospitality Interiors</option>
-                    <option value="Workplaces & Office">
-                      Workplaces & Corporate Offices
+                    <option value="" disabled>
+                      Select a service
                     </option>
-                    <option value="Retail">Retail & Showroom Interiors</option>
-                    <option value="Turnkey Commercial">
-                      Turnkey Commercial Execution
+                    <option value="Healthcare">
+                      Healthcare (Clinics/Hospitals)
                     </option>
+                    <option value="Hospitality">
+                      Hospitality (Hotels/Lounges)
+                    </option>
+                    <option value="Workplaces">
+                      Workplaces (Offices/Corporate)
+                    </option>
+                    <option value="Retail">Retail (Stores/Showrooms)</option>
                   </select>
                 </div>
 
                 <div>
-                  <label className="block text-[11px] font-semibold text-[#4a4036] uppercase tracking-wider mb-1">
-                    Approx. Area or Location
+                  <label className="block text-[11px] font-semibold text-[#423c36] uppercase tracking-wider mb-1">
+                    Approx. Area *
                   </label>
-                  <input
+
+                  <select
                     name="area"
-                    type="text"
-                    placeholder="e.g. 12,000 sq.ft, Bengaluru"
-                    className="w-full bg-[#fdfbf7] border border-[#e5dcd0] rounded-lg px-3.5 py-2.5 text-xs sm:text-sm text-[#2e2721] focus:outline-none focus:border-[#c5a059] focus:bg-white"
-                  />
+                    required
+                    defaultValue=""
+                    className="w-full px-2.5 py-2 bg-white border border-[#dcd3c3] rounded-lg text-xs focus:outline-none focus:ring-2 focus:ring-[#c5a059] text-[#1c1917]"
+                  >
+                    <option value="" disabled>
+                      Select an area
+                    </option>
+                    <option value="Under 3,000 sq.ft.">
+                      &lt; 3,000 sq.ft.
+                    </option>
+                    <option value="3,000 – 10,000 sq.ft.">
+                      3,000 – 10,000 sq.ft.
+                    </option>
+                    <option value="10,000 – 25,000 sq.ft.">
+                      10,000 – 25,000 sq.ft.
+                    </option>
+                    <option value="25,000+ sq.ft.">25,000+ sq.ft.</option>
+                  </select>
                 </div>
 
                 <div className="pt-1.5">
@@ -214,7 +257,7 @@ export default function Hero({ onOpenConsultation }) {
                     type="submit"
                     className="w-full gold-btn py-3 rounded-lg font-semibold text-xs sm:text-sm tracking-wider uppercase flex items-center justify-center gap-2 cursor-pointer shadow-md"
                   >
-                    <span>Book Free Consultation</span>
+                    Book Free Consultation
                     <ArrowRight className="w-4 h-4" />
                   </button>
                   <p className="text-[10px] text-[#8c8275] text-center mt-2">
