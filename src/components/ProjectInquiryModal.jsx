@@ -86,9 +86,13 @@ export default function ProjectInquiryModal({
                 Name *
               </label>
               <input
+                id="contact-name"
                 name="name"
                 type="text"
                 required
+                minLength={2}
+                maxLength={60}
+                autoComplete="name"
                 placeholder="Your full name"
                 className="w-full bg-[#faf8f5] border border-[#e5dcd0] rounded-lg px-3.5 py-2.5 text-sm text-[#2e2721] focus:outline-none focus:border-[#8c6d3b] focus:bg-white"
               />
@@ -99,9 +103,12 @@ export default function ProjectInquiryModal({
                 Phone / WhatsApp *
               </label>
               <input
+                id="contact-phone"
                 name="phone"
                 type="tel"
                 required
+                maxLength={17}
+                autoComplete="tel"
                 placeholder="+91 80881 96750"
                 className="w-full bg-[#faf8f5] border border-[#e5dcd0] rounded-lg px-3.5 py-2.5 text-sm text-[#2e2721] focus:outline-none focus:border-[#8c6d3b] focus:bg-white"
               />
@@ -114,10 +121,13 @@ export default function ProjectInquiryModal({
                 Email Address *
               </label>
               <input
+                id="contact-email"
+                name="email"
                 type="email"
                 required
-                placeholder="name@company.com"
-                name="email"
+                maxLength={254}
+                autoComplete="email"
+                placeholder="you@company.com"
                 className="w-full bg-[#faf8f5] border border-[#e5dcd0] rounded-lg px-3.5 py-2.5 text-sm text-[#2e2721] focus:outline-none focus:border-[#8c6d3b] focus:bg-white"
               />
             </div>
@@ -127,8 +137,13 @@ export default function ProjectInquiryModal({
                 Company Name
               </label>
               <input
+                id="contact-company"
                 name="company"
                 type="text"
+                required
+                minLength={2}
+                maxLength={100}
+                autoComplete="organization"
                 placeholder="Business / Organization"
                 className="w-full bg-[#faf8f5] border border-[#e5dcd0] rounded-lg px-3.5 py-2.5 text-sm text-[#2e2721] focus:outline-none focus:border-[#8c6d3b] focus:bg-white"
               />
@@ -141,9 +156,14 @@ export default function ProjectInquiryModal({
                 Project Location
               </label>
               <input
+                id="contact-location"
                 name="location"
                 type="text"
-                placeholder="City / Region"
+                required
+                minLength={3}
+                maxLength={100}
+                autoComplete="address-level2"
+                placeholder="City, Area (e.g. Bengaluru, Whitefield)"
                 className="w-full bg-[#faf8f5] border border-[#e5dcd0] rounded-lg px-3.5 py-2.5 text-sm text-[#2e2721] focus:outline-none focus:border-[#8c6d3b] focus:bg-white"
               />
             </div>
@@ -153,8 +173,11 @@ export default function ProjectInquiryModal({
                 Approx. Area
               </label>
               <input
+                id="contact-area"
                 name="area"
                 type="text"
+                required
+                maxLength={30}
                 placeholder="e.g. 15,000 sq.ft"
                 className="w-full bg-[#faf8f5] border border-[#e5dcd0] rounded-lg px-3.5 py-2.5 text-sm text-[#2e2721] focus:outline-none focus:border-[#8c6d3b] focus:bg-white"
               />
@@ -166,15 +189,21 @@ export default function ProjectInquiryModal({
               Project Type
             </label>
             <select
+              id="contact-project"
               name="project"
+              required
+              defaultValue=""
               className="w-full bg-[#faf8f5] border border-[#e5dcd0] rounded-lg px-3.5 py-2.5 text-sm text-[#2e2721] focus:outline-none focus:border-[#8c6d3b] focus:bg-white"
             >
-              <option value="Healthcare Interiors">Healthcare Interiors</option>
-              <option value="Hospitality Interiors">
-                Hospitality Interiors
+              <option value="" disabled>
+                Select Project Type
               </option>
               <option value="Corporate & Office Interiors">
                 Workplaces & Office Interiors
+              </option>
+              <option value="Healthcare Interiors">Healthcare Interiors</option>
+              <option value="Hospitality Interiors">
+                Hospitality Interiors
               </option>
               <option value="Retail Interiors">Retail Interiors</option>
               <option value="Commercial Interiors">Commercial Interiors</option>
@@ -189,10 +218,14 @@ export default function ProjectInquiryModal({
               Tell Us About Your Project
             </label>
             <textarea
+              id="contact-details"
               name="details"
               rows={3}
-              placeholder="Share space objectives, target timelines, or specific design preferences..."
-              className="w-full bg-[#faf8f5] border border-[#e5dcd0] rounded-lg px-3.5 py-2 text-sm text-[#2e2721] focus:outline-none focus:border-[#8c6d3b] focus:bg-white"
+              required
+              minLength={10}
+              maxLength={1000}
+              placeholder="Brief details regarding space requirements, timeline, or current shell status..."
+              className="w-full bg-[#faf8f5] border border-[#e5dcd0] rounded-lg px-3.5 py-2.5 text-sm text-[#2e2721] focus:outline-none focus:border-[#8c6d3b] focus:bg-white"
             />
           </div>
 
