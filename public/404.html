@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/images/logo_dark.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>404 – Page Not Found | Mangi Interiors</title>
+    <meta name="description" content="The page you are looking for doesn't exist. Return to Mangi Interiors homepage for commercial interior design solutions." />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Playfair+Display:wght@500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+      *, *::before, *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        background-color: #faf8f5;
+        color: #2e2721;
+        font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        line-height: 1.5;
+        -webkit-font-smoothing: antialiased;
+      }
+      .font-serif {
+        font-family: 'Playfair Display', Georgia, serif;
+      }
+      .font-garamond {
+        font-family: 'Cormorant Garamond', Georgia, serif;
+      }
+      header {
+        position: sticky;
+        top: 0;
+        z-index: 40;
+        background: rgba(250, 246, 238, 0.95);
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+        border-bottom: 1px solid #e7e0d4;
+      }
+      .header-inner {
+        max-width: 1280px;
+        margin: 0 auto;
+        padding: 14px 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .logo-img {
+        height: 42px;
+        width: auto;
+        object-fit: contain;
+        transition: transform 0.3s ease;
+      }
+      .logo-link:hover .logo-img {
+        transform: scale(1.05);
+      }
+      .header-actions {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+      }
+      .header-phone {
+        display: none;
+        align-items: center;
+        gap: 8px;
+        font-size: 13px;
+        font-weight: 600;
+        color: #4a4036;
+        text-decoration: none;
+        transition: color 0.2s ease;
+      }
+      .header-phone:hover {
+        color: #8c6d3b;
+      }
+      @media (min-width: 640px) {
+        .header-phone {
+          display: inline-flex;
+        }
+      }
+      .btn-outline-sm {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 8px 16px;
+        border-radius: 8px;
+        font-size: 12px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        text-decoration: none;
+        border: 1px solid #c5a059;
+        background: rgba(197, 160, 89, 0.08);
+        color: #3a322a;
+        transition: all 0.3s ease;
+      }
+      .btn-outline-sm:hover {
+        background: #c5a059;
+        color: #ffffff;
+        transform: translateY(-1px);
+      }
+      main {
+        flex: 1;
+        width: 100%;
+        max-width: 860px;
+        margin: 0 auto;
+        padding: 40px 20px 60px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+      .card {
+        background: #ffffff;
+        border-radius: 24px;
+        padding: 40px 28px;
+        border: 1px solid #e8ded0;
+        box-shadow: 0 4px 20px -2px rgba(46, 39, 33, 0.05);
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+      }
+      @media (min-width: 640px) {
+        .card {
+          padding: 56px 48px;
+        }
+      }
+      .accent-bar {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 6px;
+        background: linear-gradient(90deg, #d4a373 0%, #caa368 50%, #c5a059 100%);
+      }
+      .badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 6px 16px;
+        border-radius: 9999px;
+        background: #f4efe6;
+        border: 1px solid #e5dcd0;
+        color: #8c6d3b;
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        margin-bottom: 16px;
+      }
+      .badge-dot {
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        background-color: #c5a059;
+      }
+      .error-code {
+        font-size: 88px;
+        font-weight: 700;
+        line-height: 1;
+        color: rgba(197, 160, 89, 0.22);
+        user-select: none;
+        margin-bottom: -16px;
+      }
+      @media (min-width: 640px) {
+        .error-code {
+          font-size: 130px;
+          margin-bottom: -24px;
+        }
+      }
+      .title {
+        font-size: 26px;
+        font-weight: 600;
+        color: #2e2721;
+        letter-spacing: -0.02em;
+        margin-bottom: 14px;
+        line-height: 1.25;
+      }
+      @media (min-width: 640px) {
+        .title {
+          font-size: 38px;
+        }
+      }
+      .description {
+        font-size: 15px;
+        color: #5c5349;
+        max-width: 540px;
+        margin: 0 auto 32px;
+        line-height: 1.6;
+      }
+      .actions {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 40px;
+      }
+      @media (min-width: 640px) {
+        .actions {
+          flex-direction: row;
+          gap: 16px;
+        }
+      }
+      .btn-primary {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        padding: 14px 28px;
+        border-radius: 12px;
+        font-size: 13px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        text-decoration: none;
+        background: linear-gradient(135deg, #d4a373 0%, #caa368 50%, #c5a059 100%);
+        color: #ffffff;
+        box-shadow: 0 4px 14px rgba(197, 160, 89, 0.35);
+        transition: all 0.3s ease;
+        width: 100%;
+      }
+      @media (min-width: 640px) {
+        .btn-primary {
+          width: auto;
+        }
+      }
+      .btn-primary:hover {
+        background: linear-gradient(135deg, #caa368 0%, #b89047 50%, #a67c3d 100%);
+        transform: translateY(-1px);
+        box-shadow: 0 8px 20px rgba(197, 160, 89, 0.45);
+      }
+      .btn-secondary {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        padding: 14px 28px;
+        border-radius: 12px;
+        font-size: 13px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        text-decoration: none;
+        border: 1px solid #c5a059;
+        background: rgba(197, 160, 89, 0.08);
+        color: #3a322a;
+        transition: all 0.3s ease;
+        width: 100%;
+      }
+      @media (min-width: 640px) {
+        .btn-secondary {
+          width: auto;
+        }
+      }
+      .btn-secondary:hover {
+        background: #c5a059;
+        color: #ffffff;
+        transform: translateY(-1px);
+      }
+      .quick-links-section {
+        border-top: 1px solid #f1ede5;
+        padding-top: 32px;
+        text-align: left;
+      }
+      .section-heading {
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: #8c6d3b;
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 12px;
+      }
+      @media (min-width: 640px) {
+        .grid {
+          grid-template-columns: 1fr 1fr;
+          gap: 14px;
+        }
+      }
+      .link-item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 14px 18px;
+        border-radius: 14px;
+        background: #faf8f5;
+        border: 1px solid #eee7dc;
+        text-decoration: none;
+        transition: all 0.2s ease;
+      }
+      .link-item:hover {
+        background: #f6f1e8;
+        border-color: rgba(202, 163, 104, 0.6);
+        transform: translateY(-1px);
+      }
+      .link-title {
+        font-size: 14px;
+        font-weight: 600;
+        color: #2e2721;
+        transition: color 0.2s ease;
+      }
+      .link-item:hover .link-title {
+        color: #8c6d3b;
+      }
+      .link-desc {
+        font-size: 11px;
+        color: #7a6f62;
+        margin-top: 2px;
+      }
+      .link-arrow {
+        color: #b38f47;
+        font-size: 18px;
+        transition: transform 0.2s ease;
+        margin-left: 10px;
+      }
+      .link-item:hover .link-arrow {
+        transform: translateX(4px);
+      }
+      .contact-row {
+        margin-top: 28px;
+        padding-top: 20px;
+        border-top: 1px solid #f1ede5;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        gap: 18px;
+        font-size: 12px;
+        color: #6e6459;
+      }
+      .contact-row a {
+        color: #6e6459;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        transition: color 0.2s ease;
+      }
+      .contact-row a:hover {
+        color: #8c6d3b;
+      }
+      footer {
+        padding: 24px 20px;
+        border-top: 1px solid #e7e0d4;
+        background: rgba(250, 246, 238, 0.7);
+        font-size: 12px;
+        color: #7a6f62;
+      }
+      .footer-inner {
+        max-width: 1280px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+      }
+      @media (min-width: 640px) {
+        .footer-inner {
+          flex-direction: row;
+        }
+      }
+      .footer-links {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+      }
+      .footer-links a {
+        color: #7a6f62;
+        text-decoration: none;
+        transition: color 0.2s ease;
+      }
+      .footer-links a:hover {
+        color: #2e2721;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="header-inner">
+        <a href="/" class="logo-link">
+          <img src="/images/logo_dark.png" alt="Mangi Interiors Logo" class="logo-img" />
+        </a>
+
+        <div class="header-actions">
+          <a href="tel:+918088196750" class="header-phone">
+            <span>&#9742;</span>
+            <span>+91 80881 96750</span>
+          </a>
+          <a href="/" class="btn-outline-sm">
+            <span>&larr;</span>
+            <span>Return Home</span>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+      <div class="card">
+        <div class="accent-bar"></div>
+
+        <div class="badge">
+          <span class="badge-dot"></span>
+          <span>Error 404 &bull; Page Not Found</span>
+        </div>
+
+        <div class="error-code font-serif">404</div>
+
+        <h1 class="title font-serif">The Space You Are Looking For Does Not Exist</h1>
+
+        <p class="description">
+          The link you entered may be invalid, removed, or the address was typed incorrectly. Let us guide you back to our commercial interior spaces.
+        </p>
+
+        <div class="actions">
+          <a href="/" class="btn-primary">
+            <span>&#8962;</span>
+            <span>Back to Homepage</span>
+          </a>
+          <a href="/#contact" class="btn-secondary">
+            <span>&#9993;</span>
+            <span>Contact Our Team</span>
+          </a>
+        </div>
+
+        <div class="quick-links-section">
+          <div class="section-heading">Popular Destinations & Services</div>
+
+          <div class="grid">
+            <a href="/#services" class="link-item">
+              <div>
+                <div class="link-title">Commercial Services</div>
+                <div class="link-desc">Turnkey design, fitouts & corporate spaces</div>
+              </div>
+              <div class="link-arrow">&rarr;</div>
+            </a>
+
+            <a href="/#projects" class="link-item">
+              <div>
+                <div class="link-title">Featured Projects</div>
+                <div class="link-desc">Explore our delivered portfolio & workplaces</div>
+              </div>
+              <div class="link-arrow">&rarr;</div>
+            </a>
+
+            <a href="/#industries" class="link-item">
+              <div>
+                <div class="link-title">Industry Sectors</div>
+                <div class="link-desc">Offices, Healthcare, Hospitality & Retail</div>
+              </div>
+              <div class="link-arrow">&rarr;</div>
+            </a>
+
+            <a href="/#process" class="link-item">
+              <div>
+                <div class="link-title">Our 5-Step Process</div>
+                <div class="link-desc">From discovery to design, execution & handover</div>
+              </div>
+              <div class="link-arrow">&rarr;</div>
+            </a>
+          </div>
+        </div>
+
+        <div class="contact-row">
+          <a href="tel:+918088196750">
+            <span>&#9742;</span>
+            <span>+91 80881 96750</span>
+          </a>
+          <a href="https://wa.me/918088196750" target="_blank" rel="noopener noreferrer">
+            <span style="color: #10b981;">&#9679;</span>
+            <span>WhatsApp Chat</span>
+          </a>
+          <a href="mailto:info@mangiinteriors.com">
+            <span>&#9993;</span>
+            <span>info@mangiinteriors.com</span>
+          </a>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <div class="footer-inner">
+        <p>&copy; <script>document.write(new Date().getFullYear())</script> Mangi Interiors. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="/">Home</a>
+          <span>&bull;</span>
+          <a href="/#services">Services</a>
+          <span>&bull;</span>
+          <a href="/#projects">Projects</a>
+          <span>&bull;</span>
+          <a href="/#contact">Contact</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

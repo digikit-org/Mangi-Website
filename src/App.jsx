@@ -1,83 +1,118 @@
-import React, { useState, useEffect } from 'react';
-import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import StatsBar from './components/StatsBar';
-import AboutSection from './components/AboutSection';
-import Services from './components/Services';
-import Industries from './components/Industries';
-import Projects from './components/Projects';
-import WhyMangi from './components/WhyMangi';
-import Process from './components/Process';
-import Clients from './components/Clients';
-import CallToAction from './components/CallToAction';
-import ContactSection from './components/ContactSection';
-import Footer from './components/Footer';
-import ProjectInquiryModal from './components/ProjectInquiryModal';
-import DetailModal from './components/DetailModal';
-import ThankYouPage from './components/ThankYouPage';
+import React, { useState, useEffect } from "react";
+import Navbar from "./components/Navbar";
+import Hero from "./components/Hero";
+import StatsBar from "./components/StatsBar";
+import AboutSection from "./components/AboutSection";
+import Services from "./components/Services";
+import Industries from "./components/Industries";
+import Projects from "./components/Projects";
+import WhyMangi from "./components/WhyMangi";
+import Process from "./components/Process";
+import Clients from "./components/Clients";
+import CallToAction from "./components/CallToAction";
+import ContactSection from "./components/ContactSection";
+import Footer from "./components/Footer";
+import ProjectInquiryModal from "./components/ProjectInquiryModal";
+import DetailModal from "./components/DetailModal";
+import ThankYouPage from "./components/ThankYouPage";
+import NotFoundPage from "./components/NotFoundPage";
 
 export default function App() {
   const [isInquiryModalOpen, setIsInquiryModalOpen] = useState(false);
-  const [inquiryContext, setInquiryContext] = useState('');
+  const [inquiryContext, setInquiryContext] = useState("");
   const [selectedDetailItem, setSelectedDetailItem] = useState(null);
+  const [submissionData, setSubmissionData] = useState(null);
 
-  const getIsThankYouPage = () => {
-    if (typeof window === 'undefined') return false;
-    const pathname = window.location.pathname.toLowerCase();
+  const getRoute = () => {
+    if (typeof window === "undefined") return "home";
+    const pathname =
+      window.location.pathname.toLowerCase().replace(/\/+$/, "") || "/";
     const hash = window.location.hash.toLowerCase();
-    return (
-      pathname.includes('/thank-you') ||
-      pathname.includes('thank-you') ||
-      hash.includes('thank-you')
-    );
+
+    // Thank You page route
+    if (
+      pathname === "/thank-you" ||
+      hash === "#/thank-you" ||
+      hash === "#thank-you"
+    ) {
+      return "thank-you";
+    }
+
+    // Valid section shortcuts that redirect to homepage anchors
+    const sectionRedirects = {
+      "/about": "#about",
+      "/services": "#services",
+      "/projects": "#projects",
+      "/industries": "#industries",
+      "/process": "#process",
+      "/why-mangi": "#why-mangi",
+      "/contact": "#contact",
+      "/home": "",
+      "/index": "",
+    };
+
+    if (sectionRedirects[pathname] !== undefined) {
+      const targetHash = sectionRedirects[pathname];
+      window.history.replaceState({}, "", targetHash ? `/${targetHash}` : "/");
+      if (targetHash) {
+        setTimeout(() => {
+          const el = document.querySelector(targetHash);
+          if (el) el.scrollIntoView({ behavior: "smooth" });
+        }, 50);
+      }
+      return "home";
+    }
+
+    // Homepage route
+    if (pathname === "/" || pathname === "/index.html") {
+      return "home";
+    }
+
+    // All other unknown paths render 404 Not Found
+    return "not-found";
   };
 
-  const [currentPage, setCurrentPage] = useState(() => (getIsThankYouPage() ? 'thank-you' : 'home'));
-  const [submissionData, setSubmissionData] = useState(null);
+  const [currentPage, setCurrentPage] = useState(() => getRoute());
 
   useEffect(() => {
     const handleLocationChange = () => {
-      if (getIsThankYouPage()) {
-        setCurrentPage('thank-you');
-      } else {
-        setCurrentPage('home');
-      }
+      setCurrentPage(getRoute());
     };
 
-    window.addEventListener('popstate', handleLocationChange);
-    window.addEventListener('hashchange', handleLocationChange);
+    window.addEventListener("popstate", handleLocationChange);
+    window.addEventListener("hashchange", handleLocationChange);
     return () => {
-      window.removeEventListener('popstate', handleLocationChange);
-      window.removeEventListener('hashchange', handleLocationChange);
+      window.removeEventListener("popstate", handleLocationChange);
+      window.removeEventListener("hashchange", handleLocationChange);
     };
   }, []);
 
   const handleNavigateToThankYou = (data = null) => {
     setSubmissionData(data);
-    setCurrentPage('thank-you');
-    window.history.pushState({}, '', '#/thank-you');
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    setCurrentPage("thank-you");
+    window.history.pushState({}, "", "/thank-you");
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
-  const handleNavigateHome = (targetHash = '') => {
-    setCurrentPage('home');
+  const handleNavigateHome = (targetHash = "") => {
+    setCurrentPage("home");
+    const targetUrl = targetHash ? `/${targetHash}` : "/";
+    window.history.pushState({}, "", targetUrl);
     if (targetHash) {
-      window.history.pushState({}, '', targetHash);
       setTimeout(() => {
         const el = document.querySelector(targetHash);
         if (el) {
-          el.scrollIntoView({ behavior: 'smooth' });
+          el.scrollIntoView({ behavior: "smooth" });
         } else {
-          window.scrollTo({ top: 0, behavior: 'smooth' });
+          window.scrollTo({ top: 0, behavior: "smooth" });
         }
       }, 50);
     } else {
-      window.history.pushState({}, '', window.location.pathname);
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+      window.scrollTo({ top: 0, behavior: "smooth" });
     }
   };
 
-  const handleOpenInquiry = (context = '') => {
+  const handleOpenInquiry = (context = "") => {
     setInquiryContext(context);
     setIsInquiryModalOpen(true);
   };
@@ -94,7 +129,11 @@ export default function App() {
     setSelectedDetailItem(industry);
   };
 
-  if (currentPage === 'thank-you') {
+  if (currentPage === "not-found") {
+    return <NotFoundPage onBackHome={handleNavigateHome} />;
+  }
+
+  if (currentPage === "thank-you") {
     return (
       <ThankYouPage
         submissionData={submissionData}

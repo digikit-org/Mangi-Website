@@ -1,8 +1,25 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
+  "redirects": [
+    { "source": "/home", "destination": "/", "permanent": true },
+    { "source": "/index", "destination": "/", "permanent": true },
+    { "source": "/about", "destination": "/#about", "permanent": true },
+    { "source": "/services", "destination": "/#services", "permanent": true },
+    { "source": "/projects", "destination": "/#projects", "permanent": true },
+    { "source": "/industries", "destination": "/#industries", "permanent": true },
+    { "source": "/process", "destination": "/#process", "permanent": true },
+    { "source": "/why-mangi", "destination": "/#why-mangi", "permanent": true },
+    { "source": "/contact", "destination": "/#contact", "permanent": true },
+    { "source": "/thanks", "destination": "/thank-you", "permanent": true },
+    { "source": "/thankyou", "destination": "/thank-you", "permanent": true }
+  ],
   "rewrites": [
     {
-      "source": "/(.*)",
+      "source": "/thank-you",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/thank-you/",
       "destination": "/index.html"
     }
   ]
