@@ -27,7 +27,8 @@ export default function NotFoundPage({ onBackHome }) {
     window.scrollTo({ top: 0, behavior: "smooth" });
     document.title = "404 – Page Not Found | Mangi Interiors";
     return () => {
-      document.title = "Mangi Interiors — Spaces That Work. Spaces That Inspire.";
+      document.title =
+        "Mangi Interiors — Spaces That Work. Spaces That Inspire.";
     };
   }, []);
 
@@ -154,41 +155,6 @@ export default function NotFoundPage({ onBackHome }) {
             </button>
           </div>
 
-          {/* Quick Links Section */}
-          <div className="pt-8 border-t border-[#f1ede5] text-left">
-            <h2 className="text-xs font-bold uppercase tracking-[0.2em] text-[#8c6d3b] text-center mb-6">
-              Popular Destinations & Services
-            </h2>
-
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
-              {quickLinks.map((item, idx) => {
-                const IconComponent = item.icon;
-                return (
-                  <button
-                    key={idx}
-                    onClick={(e) => handleHomeClick(e, item.hash)}
-                    className="flex items-center justify-between p-4 rounded-xl bg-[#faf8f5] hover:bg-[#f6f1e8] border border-[#eee7dc] hover:border-[#caa368]/60 transition-all text-left group cursor-pointer"
-                  >
-                    <div className="flex items-center gap-3.5">
-                      <div className="w-9 h-9 rounded-lg bg-white border border-[#e8ded0] flex items-center justify-center text-[#8c6d3b] group-hover:text-[#c5a059] transition-colors shrink-0 shadow-2xs">
-                        <IconComponent className="w-4 h-4" />
-                      </div>
-                      <div>
-                        <div className="text-xs sm:text-sm font-semibold text-[#2e2721] group-hover:text-[#8c6d3b] transition-colors">
-                          {item.title}
-                        </div>
-                        <div className="text-[11px] sm:text-xs text-[#7a6f62]">
-                          {item.desc}
-                        </div>
-                      </div>
-                    </div>
-                    <ArrowRight className="w-4 h-4 text-[#b38f47] transform group-hover:translate-x-1 transition-transform shrink-0 ml-2" />
-                  </button>
-                );
-              })}
-            </div>
-          </div>
-
           {/* Direct Assistance Row */}
           <div className="mt-8 pt-6 border-t border-[#f1ede5] flex flex-wrap items-center justify-center gap-4 sm:gap-8 text-xs text-[#6e6459]">
             <a
@@ -221,7 +187,9 @@ export default function NotFoundPage({ onBackHome }) {
       {/* 3. Footer */}
       <footer className="py-6 border-t border-[#e7e0d4] bg-[#faf6ee]/70 text-center text-xs text-[#7a6f62]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-3">
-          <p>© {new Date().getFullYear()} Mangi Interiors. All rights reserved.</p>
+          <p>
+            © {new Date().getFullYear()} Mangi Interiors. All rights reserved.
+          </p>
           <div className="flex items-center gap-4 text-xs">
             <button
               onClick={(e) => handleHomeClick(e)}
